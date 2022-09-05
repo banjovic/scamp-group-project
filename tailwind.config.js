@@ -10,6 +10,8 @@ module.exports = {
       fontSize: {
         "logo-sm": "2.1875rem",
         "logo-lg": "2.5rem",
+        "display-sm": "3.125rem",
+        "display-lg": "5.625rem",
       },
       colors: {
         darkGrey: "#2C2C2C",

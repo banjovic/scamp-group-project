@@ -14,7 +14,6 @@ const Header = () => {
     { title: "Products", link: "#" },
   ];
 
-  console.log(isOpen);
   return (
     <header className="relative container mx-auto px-5 py-2.5 flex items-center">
       <h1 className="text-logo-sm text-gold font-700 flex-1 md:text-logo-lg">
@@ -65,4 +64,3 @@ const Header = () => {
 };
 
 export default Header;
-// focus:outline-none
