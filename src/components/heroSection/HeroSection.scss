@@ -1,0 +1,109 @@
+@mixin roundedRectangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 283px;
+  height: 384px;
+  border-radius: inherit;
+  border: 1px solid theme("colors.darkGold");
+  opacity: 0.3;
+  z-index: -1;
+
+  @media (min-width: 1024px) {
+    height: 500px;
+    width: 100%;
+  }
+}
+
+.hero-section {
+  @media (min-width: 768px) {
+    gap: 60px;
+  }
+
+  &__content {
+    &__heading {
+      line-height: 60px;
+      background: linear-gradient(
+        268.86deg,
+        theme("colors.gold") 10.03%,
+        rgba(255, 208, 168, 0.28) 118.88%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    @media (min-width: 768px) {
+      max-width: 400px;
+    }
+    @media (min-width: 1024px) {
+      max-width: 600px;
+
+      &__heading {
+        line-height: 96px;
+      }
+    }
+  }
+
+  &__image-wrapper {
+    position: relative;
+    height: 416px;
+    border-radius: 235px;
+    z-index: 1;
+
+    &::before {
+      @include roundedRectangle;
+      transform: matrix(1, -0.05, 0.05, 1, -11, 23);
+    }
+
+    &::after {
+      @include roundedRectangle;
+      transform: matrix(0.96, -0.27, 0.27, 0.96, -18, 14);
+    }
+
+    img {
+      border-radius: inherit;
+      object-fit: cover;
+      width: 283px;
+      height: 384px;
+    }
+
+    @media (min-width: 768px) {
+      flex: 1;
+      max-width: 400px;
+    }
+
+    @media (min-width: 1024px) {
+      height: 600px;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+.stamp {
+  position: relative;
+  display: grid;
+  place-items: center;
+  //   animation: name duration timing-function delay iteration-count direction fill-mode;
+  svg {
+    animation: rotate 6s forwards infinite linear;
+    transform: rotate(0deg);
+  }
+
+  .shop {
+    position: absolute;
+    font-size: 25px;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
