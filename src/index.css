@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold;
+  }
+
+  p {
+    @apply text-lightGrey;
+  }
+}
+
+@layer components {
+  .title {
+    background: linear-gradient(
+      268.86deg,
+      theme("colors.gold") 10.03%,
+      rgba(255, 208, 168, 0.28) 118.88%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 50px;
+  }
+
+  @screen md {
+    .title {
+      font-size: 70px;
+    }
+  }
+}
