@@ -1,6 +1,7 @@
 import AboutSection from "../../components/aboutSection/AboutSection";
 import Faq from "../../components/faq/Faq";
 import HeroSection from "../../components/heroSection/HeroSection";
+import Newsletter from "../../components/newsletter/newsletter";
 
 import "./HomePage.scss";
 
@@ -10,6 +11,7 @@ const HomePage = () => {
       <HeroSection />
       <AboutSection />
       <Faq />
+      <Newsletter />
       <div className="h-52"></div>
     </div>
   );

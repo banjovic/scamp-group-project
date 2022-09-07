@@ -15,9 +15,26 @@
   p {
     @apply text-lightGrey;
   }
+
+  [type="text"] {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #dedede;
+    height: 100%;
+    width: 100%;
+    font-size: 27px;
+  }
 }
 
 @layer components {
+  .input {
+    padding: 0 30px;
+    height: 55px;
+    border-bottom: 1px solid theme("colors.gold");
+    position: relative;
+  }
+
   .title {
     background: linear-gradient(
       268.86deg,
