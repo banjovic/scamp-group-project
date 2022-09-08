@@ -86,13 +86,6 @@ const Contact = () => {
           );
         })}
 
-        {/* <div className="flex items-center">
-          <input type="checkbox" name="terms" id="TnC" />
-          <label for="TnC" className="text-[#9A9A9A] text-lg ml-3">
-            I agree to the{" "}
-            <span className="text-white">terms and condition</span>
-          </label>
-        </div> */}
         <button className="outline-none border-none bg-transparent">
           <SendStamp />
         </button>
