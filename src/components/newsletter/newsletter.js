@@ -13,7 +13,7 @@ const Newsletter = () => {
     event.preventDefault();
 
     const { newErrors, valid } = ValidateInput(formData);
-
+    console.log(newErrors);
     if (!valid) return setError(newErrors.email);
 
     resetFormFields({ email: "" });
@@ -23,20 +23,20 @@ const Newsletter = () => {
   return (
     <section
       aria-label="newsletter"
-      className="max-w-[712px] text-center md:flex md:flex-col md:items-center md:mx-auto"
+      className="max-w-[712px] py-[50px] sm:flex sm:flex-col sm:items-center sm:mx-auto sm:text-center md:py-10 "
     >
       <h2 className="title ">Be The First</h2>
       <p className="text-[19px] md:text-[23px]">
         Join our newsletter and be the first to know about new and exciting
         deals
       </p>
-      <form className="mt-16" onSubmit={handleSubmit}>
-        <div className="input flex max-w-[450px]">
+      <form className="mt-16" onSubmit={handleSubmit} method="POST">
+        <div className="input px-[30px] flex">
           <input
             type="text"
             name="email"
             placeholder="Enter your Email"
-            className="active:bg-transparent"
+            className="text-[27px] active:bg-transparent"
             value={formData.email}
             onChange={handleChange}
           />

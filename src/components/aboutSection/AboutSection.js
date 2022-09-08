@@ -5,7 +5,7 @@ const AboutSection = () => {
       className="space-y-[33px] md:flex md:gap-[33px]"
     >
       <div className="md:flex-1 md:self-end">
-        <h2 id="about-title" className="title text-[50px]">
+        <h2 id="about-title" className="title">
           Our Story
         </h2>
         <h3 className="text-gold text-3xl">

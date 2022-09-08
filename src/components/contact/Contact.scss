@@ -1,0 +1,79 @@
+@mixin ecllipse {
+  content: "";
+  position: absolute;
+  right: 1rem;
+  max-width: 339.91px;
+  max-height: 168.28px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  border: 1px solid #ffd0a8;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.contact-us {
+  &__image {
+    position: relative;
+    padding: 50px 0 30px;
+    height: 379.28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    overflow: hidden;
+
+    &::before {
+      @include ecllipse;
+      transform: rotate(49deg);
+    }
+
+    &::after {
+      @include ecllipse;
+      transform: rotate(63.5deg);
+    }
+
+    img {
+      border-radius: 250px;
+      height: 100%;
+      max-width: 350px;
+      margin: 0 auto;
+    }
+    @screen md {
+      height: 400px;
+      width: 420px;
+
+      &::before,
+      &::after {
+        top: 7rem;
+      }
+    }
+
+    @screen lg {
+      height: 600px;
+      padding: 90px 0 90px;
+
+      img {
+        margin: 0;
+        height: 500px;
+        width: 320px;
+      }
+
+      &::before,
+      &::after {
+        top: 9rem;
+        right: 0;
+        left: 1rem;
+        max-width: 550px;
+        max-height: 250px;
+      }
+    }
+  }
+  @screen xl {
+    &::before,
+    &::after {
+      top: 10rem;
+      left: 5rem;
+    }
+  }
+}

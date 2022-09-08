@@ -32,6 +32,13 @@
   }
 
   @screen md {
+    img {
+      max-width: 294.32px;
+      height: 410.37px;
+    }
+  }
+
+  @screen lg {
     @apply grid place-items-center;
 
     img {

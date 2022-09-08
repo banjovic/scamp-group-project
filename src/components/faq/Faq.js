@@ -33,15 +33,15 @@ const Faq = () => {
   return (
     <section
       aria-labelledby="faq-section-title"
-      className="flex flex-col gap-7 md:flex-row"
+      className="flex flex-col gap-7 py-[10px] md:flex-row md:py-10"
     >
-      <div className="faq__image self-center pl-14 pt-14 md:flex-1 lg:flex-[2] lg:max-w-[600px]">
+      <div className="faq__image self-center pl-14 pt-14 md:flex-1 lg:max-w-[600px]">
         <img
           src="https://images.pexels.com/photos/7175345/pexels-photo-7175345.jpeg?cs=srgb&dl=pexels-marta-dzedyshko-7175345.jpg&fm=jpg"
           alt="hero section bath bomb feature"
         />
       </div>
-      <div className="md:flex-1">
+      <div className="md:flex-2 lg:flex-1">
         <h2
           id="faq-section-title"
           className="title font-semibold leading-[54px] md:leading-[64px]"

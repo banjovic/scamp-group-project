@@ -1,4 +1,5 @@
 import AboutSection from "../../components/aboutSection/AboutSection";
+import Contact from "../../components/contact/Contact";
 import Faq from "../../components/faq/Faq";
 import HeroSection from "../../components/heroSection/HeroSection";
 import Newsletter from "../../components/newsletter/newsletter";
@@ -12,6 +13,7 @@ const HomePage = () => {
       <AboutSection />
       <Faq />
       <Newsletter />
+      <Contact />
       <div className="h-52"></div>
     </div>
   );
