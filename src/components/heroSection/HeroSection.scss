@@ -6,46 +6,17 @@
   width: 283px;
   height: 384px;
   border-radius: inherit;
-  border: 1px solid theme("colors.darkGold");
+  border: 2px solid theme("colors.darkGold");
   opacity: 0.3;
   z-index: -1;
 
-  @media (min-width: 1024px) {
+  @screen lg {
     height: 500px;
     width: 100%;
   }
 }
 
 .hero-section {
-  @media (min-width: 768px) {
-    gap: 60px;
-  }
-
-  &__content {
-    &__heading {
-      line-height: 60px;
-      background: linear-gradient(
-        268.86deg,
-        theme("colors.gold") 10.03%,
-        rgba(255, 208, 168, 0.28) 118.88%
-      );
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    @media (min-width: 768px) {
-      max-width: 400px;
-    }
-    @media (min-width: 1024px) {
-      max-width: 600px;
-
-      &__heading {
-        line-height: 96px;
-      }
-    }
-  }
-
   &__image-wrapper {
     position: relative;
     height: 416px;
@@ -69,12 +40,12 @@
       height: 384px;
     }
 
-    @media (min-width: 768px) {
+    @screen md {
       flex: 1;
       max-width: 400px;
     }
 
-    @media (min-width: 1024px) {
+    @screen lg {
       height: 600px;
 
       img {
