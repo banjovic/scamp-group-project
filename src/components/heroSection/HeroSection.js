@@ -4,12 +4,12 @@ import "./HeroSection.scss";
 
 const HeroSection = () => {
   return (
-    <header className="hero-section flex flex-col md:flex-row md:mt-10 md:justify-between">
-      <div className="hero-section__content flex flex-col items-start space-y-10">
-        <h1 className="hero-section__content__heading text-display-sm font-semibold lg:text-display-lg">
+    <header className="hero-section flex flex-col overflow-hidden md:flex-row md:mt-10 md:justify-between md:gap-[60px]">
+      <div className="flex flex-col items-start space-y-10 md:max-w-[400px] lg:max-w-[600px]">
+        <h1 className="title leading-[60px] text-display-sm font-semibold lg:text-display-lg lg:leading-[96px]">
           Round fizzy burst of relaxation
         </h1>
-        <p className="text-lg text-lightGrey">
+        <p className="text-lg">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa nulla
           amet, dolor tellus enim. Blandit in sed enim dictum turpis purus ante
           duis.

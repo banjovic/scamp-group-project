@@ -8,7 +8,7 @@ import HomePage from "./pages/homePage/HomePage";
 import ProductsPage from "./pages/productsPage/ProductsPage";
 import PageNotFound from "./pages/pageNotFound/PageNotFound";
 
-import "./index.css";
+import "./index.scss";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
