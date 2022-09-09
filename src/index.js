@@ -5,6 +5,8 @@ import reportWebVitals from "./reportWebVitals";
 
 import App from "./App";
 import HomePage from "./pages/homePage/HomePage";
+import ProductsPage from "./pages/productsPage/ProductsPage";
+import PageNotFound from "./pages/pageNotFound/PageNotFound";
 
 import "./index.css";
 
@@ -15,7 +17,10 @@ root.render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<HomePage />} />
-          {/* <Route path="" element={} /> */}
+          <Route path="/products" element={<ProductsPage />} />
+
+          {/* Kindly don't add any other route below the 404 path */}
+          <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
