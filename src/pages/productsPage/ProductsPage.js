@@ -1,6 +1,6 @@
 import React, { useState, Fragment } from "react";
 import "./ProductsPage.scss";
-import Product1 from "../../assets/images/VA4.png";
+// import Product1 from "../../assets/images/VA4.png";
 
 import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
@@ -11,7 +11,7 @@ import {
   PlusIcon,
   Squares2X2Icon,
 } from "@heroicons/react/20/solid";
-import ProductDetail from "../../components/productsFolder/ProductDetail";
+// import ProductDetail from "../../components/productsFolder/ProductDetail";
 
 const sortOptions = [
   { name: "Most Popular", href: "#", current: true },
