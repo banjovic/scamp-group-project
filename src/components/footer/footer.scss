@@ -1,0 +1,142 @@
+.footer {
+	position: fixed;
+	bottom: 0;
+	padding: 10px 100px 0 0;
+	width: 100vw;
+	height: 375px;
+	background: #171d1c;
+	box-sizing: border-box;
+	@media screen and (max-width: 768px) {
+		height: auto;
+	}
+	.footer-top {
+		box-sizing: border-box;
+		display: flex;
+		width: 100%;
+		padding: 0 100px;
+		justify-content: space-between;
+		@media screen and (max-width: 768px) {
+			flex-direction: column;
+		}
+		.left {
+			h1 {
+				width: 340px;
+				height: 59px;
+				font-family: 'Abhaya Libre';
+				font-style: normal;
+				font-weight: 700;
+				font-size: 50px;
+				line-height: 59px;
+				color: #ebd06e;
+			}
+			h2 {
+				width: 340px;
+				height: 64px;
+				font-family: 'Abhaya Libre Medium';
+				font-style: normal;
+				font-weight: 500;
+				font-size: 30px;
+				line-height: 105.47%;
+				color: #a7a5a5;
+			}
+			p {
+				width: 340px;
+				height: 71px;
+				font-family: 'Abhaya Libre';
+				font-style: normal;
+				font-weight: 400;
+				font-size: 19px;
+				line-height: 146.47%;
+				color: #b2b2b2;
+			}
+		}
+		.center1,
+		.center2 {
+			justify-self: center;
+			display: flex;
+			flex-direction: column;
+			// padding: 0 2rem 0 0;
+			width: 5rem;
+			h1 {
+				width: 70px;
+				height: 26px;
+				font-family: 'Abhaya Libre';
+				font-style: normal;
+				font-weight: 700;
+				font-size: 25px;
+				line-height: 105.47%;
+				letter-spacing: 0.09em;
+				color: #ebd06e;
+				margin-bottom: 3rem;
+			}
+			a {
+				text-decoration: none;
+				width: 70px;
+				height: 28px;
+				font-family: 'Abhaya Libre';
+				font-style: normal;
+				font-weight: 400;
+				font-size: 19px;
+				line-height: 146.47%;
+				color: #b2b2b2;
+			}
+		}
+		.right {
+			justify-self: flex-end;
+			h1 {
+				width: 361px;
+				height: 26px;
+				font-family: 'Abhaya Libre';
+				font-style: normal;
+				font-weight: 700;
+				font-size: 25px;
+				line-height: 105.47%;
+				letter-spacing: 0.09em;
+				color: #ebd06e;
+			}
+			div {
+				display: flex;
+				align-items: center;
+				h1 {
+					width: 100px;
+					height: 34px;
+					font-family: 'Abhaya Libre Medium';
+					font-style: normal;
+					font-weight: 500;
+					font-size: 23px;
+					line-height: 146.47%;
+					color: #ffffff;
+				}
+				p {
+					width: 261px;
+					height: 28px;
+					font-family: 'Abhaya Libre';
+					font-style: normal;
+					font-weight: 400;
+					font-size: 19px;
+					line-height: 146.47%;
+					color: #b2b2b2;
+				}
+			}
+		}
+	}
+
+	.footer-bottom {
+		position: absolute;
+		bottom: 0;
+		margin-top: auto;
+		margin-bottom: 10px;
+		box-sizing: border-box;
+		width: 100vw;
+		font-family: 'Abhaya Libre';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 17px;
+		line-height: 146.47%;
+		text-align: center;
+		color: #5f5f5f;
+		span {
+			color: #fff;
+		}
+	}
+}
