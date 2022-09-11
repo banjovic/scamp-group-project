@@ -1,6 +1,8 @@
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+
 import { ReactComponent as BathBowl } from "../../assets/Bath bowl.svg";
 
-import { useContext } from "react";
 import { CartContext } from "../../context/cart/cart.context";
 
 import "./Cart.scss";
@@ -12,6 +14,7 @@ const Cart = () => {
     decreaseItemInCart,
     increaseItemInCart,
   } = useContext(CartContext);
+  let navigate = useNavigate();
 
   return (
     <>
@@ -22,7 +25,10 @@ const Cart = () => {
         <div className="w-full h-[60vh] px-5 pt-12 flex flex-col justify-center items-center">
           <BathBowl />
           <p className="text-black mb-6">Looks like your cart is empty.</p>
-          <button className="w-full border-none outline-none bg-darkGold text-darkGrey py-3 px-[10px] max-w-[300px]">
+          <button
+            className="w-full border-none outline-none bg-darkGold text-darkGrey py-3 px-[10px] max-w-[300px]"
+            onClick={() => navigate("/")}
+          >
             Go back to Shop
           </button>
         </div>
