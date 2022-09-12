@@ -11,6 +11,7 @@ const Cart = () => {
     clearItemFromCart,
     decreaseItemInCart,
     increaseItemInCart,
+    total,
   } = useContext(CartContext);
 
   let navigate = useNavigate();
@@ -70,7 +71,7 @@ const Cart = () => {
                     <button onClick={() => increaseItemInCart(cartItem)}>
                       +
                     </button>
-                    <span>1</span>
+                    <span>{quantity}</span>
                     <button onClick={() => decreaseItemInCart(cartItem)}>
                       -
                     </button>
@@ -83,7 +84,7 @@ const Cart = () => {
             })}
           </div>
           <h4 className="self-end">
-            Total: <span>NGN 6000</span>
+            Total: <span>NGN {total}</span>
           </h4>
           <button className="bg-darkGold px-3 h-[50px] max-w-[350px] w-full self-end uppercase font-semibold">
             Proceed to Checkout

@@ -17,6 +17,7 @@ const defaultValue = {
   decreaseItemInCart: () => {},
   IncreaseItemInCart: () => {},
   itemsCount: 0,
+  total: 0,
 };
 
 export const CartContext = createContext(defaultValue);
