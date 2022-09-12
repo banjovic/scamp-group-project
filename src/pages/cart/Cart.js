@@ -5,8 +5,6 @@ import { ReactComponent as BathBowl } from "../../assets/Bath bowl.svg";
 
 import { CartContext } from "../../context/cart/cart.context";
 
-import "./Cart.scss";
-
 const Cart = () => {
   const {
     cartItems,
@@ -14,6 +12,7 @@ const Cart = () => {
     decreaseItemInCart,
     increaseItemInCart,
   } = useContext(CartContext);
+
   let navigate = useNavigate();
 
   return (
