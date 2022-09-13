@@ -3,8 +3,11 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 
+import { CartProvider } from "./context/cart/cart.context";
+
 import App from "./App";
 import HomePage from "./pages/homePage/HomePage";
+import Cart from "./pages/cart/Cart";
 import ProductsPage from "./pages/productsPage/ProductsPage";
 import PageNotFound from "./pages/pageNotFound/PageNotFound";
 
@@ -14,15 +17,18 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />}>
-          <Route index element={<HomePage />} />
-          <Route path="/products" element={<ProductsPage />} />
 
-          {/* Kindly don't add any other route below the 404 path */}
-          <Route path="*" element={<PageNotFound />} />
-        </Route>
-      </Routes>
+      <CartProvider>
+        <Routes>
+          <Route path="/" element={<App />}>
+            <Route index element={<HomePage />} />
+            <Route path="/products" element={<ProductsPage />} />
+              <Route path="/cart" element={<Cart />} />
+            {/* Kindly don't add any other route below the 404 path */}
+            <Route path="*" element={<PageNotFound />} />
+          </Route>
+        </Routes>
+      </CartProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

@@ -64,7 +64,7 @@ const Faq = () => {
                 <span
                   className={`faq__reveal-icon faq__reveal-icon--${
                     currentlyOpened ?? "closed"
-                  }`}
+                  } cursor-pointer`}
                   onClick={() => revealAnswer(question)}
                 />
                 <div
