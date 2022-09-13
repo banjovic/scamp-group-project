@@ -1,9 +1,9 @@
+import { Fragment, useState } from "react";
 import UseInput, { ValidateInput } from "../../hooks/UseInput";
 
 import { ReactComponent as SendStamp } from "../../assets/Send Button.svg";
 
 import "./Contact.scss";
-import { useState } from "react";
 
 const initialValue = {
   email: "",
@@ -59,7 +59,7 @@ const Contact = () => {
           const { type, name, placeholder } = input;
           if (type === "textarea") {
             return (
-              <>
+              <Fragment key={index}>
                 <div className="input h-fit max-w-[520px]">
                   <textarea
                     rows={4}
@@ -71,21 +71,27 @@ const Contact = () => {
                 {errors[name] && (
                   <span className="text-gold text-xs">{errors[name]}</span>
                 )}
-              </>
+              </Fragment>
             );
           }
           return (
-            <>
-              <div key={index} className="input max-w-[520px]">
+            <Fragment key={index}>
+              <div className="input max-w-[520px]">
                 <input {...input} onChange={handleChange} />
               </div>
               {errors[name] && (
                 <span className="text-gold text-xs">{errors[name]}</span>
               )}
-            </>
+            </Fragment>
           );
         })}
-
+        {/* <div className="flex items-center">
+          <input type="checkbox" name="terms" id="TnC" />
+          <label for="TnC" className="text-[#9A9A9A] text-lg ml-3">
+            I agree to the{" "}
+            <span className="text-white">terms and condition</span>
+          </label>
+        </div> */}
         <button className="outline-none border-none bg-transparent">
           <SendStamp />
         </button>
