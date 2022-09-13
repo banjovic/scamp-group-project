@@ -1,5 +1,6 @@
 import React, { useState, Fragment } from "react";
 import "./ProductsPage.scss";
+import ProductItems from "../../components/productsFolder/products.json";
 // import Product1 from "../../assets/images/VA4.png";
 
 import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
@@ -70,45 +71,6 @@ const filters = [
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
-
-const products = [
-  {
-    id: 1,
-    name: "Earthen Bottle",
-    href: "#",
-    price: "$48",
-    imageSrc: "../../assets/images/VA4.png",
-    imageAlt: "Bath Bomb",
-  },
-  {
-    id: 2,
-    name: "Nomad Tumbler",
-    href: "#",
-    price: "$35",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg",
-    imageAlt: "Bath Bomb",
-  },
-  {
-    id: 3,
-    name: "Focus Paper Refill",
-    href: "#",
-    price: "$89",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg",
-    imageAlt: "Bath Bomb",
-  },
-  {
-    id: 4,
-    name: "Machined Mechanical Pencil",
-    href: "#",
-    price: "$35",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg",
-    imageAlt: "Bath Bomb",
-  },
-  // More products...
-];
 
 const ProductsPage = () => {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
@@ -402,30 +364,31 @@ const ProductsPage = () => {
                       <h2 className="sr-only">Products</h2>
 
                       <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-                        {products.map((product) => (
-                          <a
-                            key={product.id}
-                            href={product.href}
-                            className="group"
-                            // onClick={() => {
-                            //   onClickProduct();
-                            // }}
-                          >
-                            <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
-                              <img
-                                src={product.imageSrc}
-                                alt={product.imageAlt}
-                                className="h-full w-full object-cover object-center group-hover:opacity-75"
-                              />
-                            </div>
-                            <h3 className="mt-4 text-sm text-lightGrey">
-                              {product.name}
-                            </h3>
-                            <p className="mt-1 text-lg font-medium text-lightGold">
-                              {product.price}
-                            </p>
-                          </a>
-                        ))}
+                        {ProductItems &&
+                          ProductItems.map((product) => (
+                            <a
+                              key={product.id}
+                              href={product.href}
+                              className="group"
+                              // onClick={() => {
+                              //   onClickProduct();
+                              // }}
+                            >
+                              <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
+                                <img
+                                  src={product.imageSrc}
+                                  alt={product.imageAlt}
+                                  className="h-full w-full object-cover object-center group-hover:opacity-75"
+                                />
+                              </div>
+                              <h3 className="mt-4 text-sm text-lightGrey">
+                                {product.name}
+                              </h3>
+                              <p className="mt-1 text-lg font-medium text-lightGold">
+                                {product.price}
+                              </p>
+                            </a>
+                          ))}
                       </div>
                     </div>
                   </div>
