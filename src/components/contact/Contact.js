@@ -57,7 +57,7 @@ const Contact = () => {
       >
         {inputs.map((input, index) => {
           const { type, name, placeholder } = input;
-          if (type == "textarea") {
+          if (type === "textarea") {
             return (
               <Fragment key={index}>
                 <div className="input h-fit max-w-[520px]">
