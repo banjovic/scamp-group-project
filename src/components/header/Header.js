@@ -42,7 +42,9 @@ const Header = () => {
         ))}
       </nav>
       <Cart
-        className={`w-7 h-7 mr-4 ${isMatched && "[&_path]:stroke-darkGrey"}`}
+        className={`w-7 h-7 mr-4 cursor-pointer ${
+          isMatched && "[&_path]:stroke-darkGrey"
+        }`}
         onClick={() => navigate("/cart")}
       />
 

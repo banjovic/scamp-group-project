@@ -9,8 +9,6 @@ import {
 } from "./cart.utils";
 
 const defaultValue = {
-  isCartOpen: false,
-  openCart: () => {},
   cartItems: [],
   addItemToCart: () => {},
   clearItemFromCart: () => {},
@@ -25,14 +23,7 @@ export const CartContext = createContext(defaultValue);
 export const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(cartReducer, initialState);
 
-  const { isCartOpen, cartItems, itemsCount, total } = state;
-
-  const openCart = (bool) => {
-    dispatch({
-      type: CART_ACTIONS_TYPES.SET_OPEN_CART,
-      payload: bool,
-    });
-  };
+  const { cartItems, itemsCount, total } = state;
 
   const updateCartItems = (cartItems) => {
     const newCount = cartItems.reduce(
@@ -75,8 +66,6 @@ export const CartProvider = ({ children }) => {
   };
 
   const value = {
-    isCartOpen,
-    openCart,
     addItemToCart,
     clearItemFromCart,
     decreaseItemInCart,
