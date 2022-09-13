@@ -20,6 +20,7 @@ module.exports = {
         darkGold: "#D9A57A",
         grey: "#959595",
         lightGrey: "#B2B2B2",
+        veryLightGrey: "#EAEAEA",
         white: "#FFFFFF",
         lightBrown: "#DDD5D0",
       },
