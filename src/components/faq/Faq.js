@@ -16,7 +16,7 @@ const Faq = () => {
         "Yes, You can pay using cryptocurrencies, We accept only BNB from smartchain",
     },
     {
-      question: "How long does it take for curly hairs?",
+      question: "How long does it last before expiring?",
       answer: "Yes, but refund is only valid for 72 hours",
     },
     {
@@ -37,7 +37,7 @@ const Faq = () => {
     >
       <div className="faq__image self-center pl-14 pt-14 md:flex-1 lg:max-w-[600px]">
         <img
-          src="https://images.pexels.com/photos/7175345/pexels-photo-7175345.jpeg?cs=srgb&dl=pexels-marta-dzedyshko-7175345.jpg&fm=jpg"
+          src="https://images.pexels.com/photos/7175332/pexels-photo-7175332.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt="hero section bath bomb feature"
         />
       </div>

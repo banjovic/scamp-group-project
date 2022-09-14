@@ -4,6 +4,7 @@ import UseInput, { ValidateInput } from "../../hooks/UseInput";
 import { ReactComponent as SendStamp } from "../../assets/Send Button.svg";
 
 import "./Contact.scss";
+import { useFormspark } from "@formspark/use-formspark";
 
 const initialValue = {
   email: "",
@@ -19,17 +20,26 @@ const inputs = [
   { type: "textarea", name: "message", placeholder: "Enter your message" },
 ];
 
+const FORMSPARK_FORM_ID = "X3j6PI8n";
+
 const Contact = () => {
   const { formData, handleChange, resetFormFields } = UseInput(initialValue);
   const [errors, setErrors] = useState({});
+  const [submit, submitting] = useFormspark({ formId: FORMSPARK_FORM_ID });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const { newErrors, valid } = ValidateInput(formData);
 
     if (!valid) return setErrors(newErrors);
+
+    await submit(formData);
+
     resetFormFields(initialValue);
+    setErrors({});
+
+    alert("Form submitted");
   };
 
   return (
@@ -39,7 +49,8 @@ const Contact = () => {
     >
       <div className="contact-us__image max-w-[390px] md:order-4 md:flex-1 mx-auto md:mx-0 md:self-center lg:mx-auto lg:max-w-[600px]">
         <img
-          src="https://images.pexels.com/photos/7175345/pexels-photo-7175345.jpeg?cs=srgb&dl=pexels-marta-dzedyshko-7175345.jpg&fm=jpg"
+          src="https://images.pexels.com/photos/7175331/pexels-photo-7175331.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          className="object-cover"
           alt="hero section bath bomb feature"
         />
       </div>
@@ -69,7 +80,9 @@ const Contact = () => {
                   ></textarea>
                 </div>
                 {errors[name] && (
-                  <span className="text-gold text-xs">{errors[name]}</span>
+                  <span role="alert" className="mt-0 text-gold text-xs block">
+                    {errors[name]}
+                  </span>
                 )}
               </Fragment>
             );
@@ -80,7 +93,9 @@ const Contact = () => {
                 <input {...input} onChange={handleChange} />
               </div>
               {errors[name] && (
-                <span className="text-gold text-xs">{errors[name]}</span>
+                <span role="alert" className="text-gold text-xs">
+                  {errors[name]}
+                </span>
               )}
             </Fragment>
           );
@@ -92,7 +107,10 @@ const Contact = () => {
             <span className="text-white">terms and condition</span>
           </label>
         </div> */}
-        <button className="outline-none border-none bg-transparent">
+        <button
+          className="outline-none border-none bg-transparent"
+          disabled={submitting}
+        >
           <SendStamp />
         </button>
       </form>

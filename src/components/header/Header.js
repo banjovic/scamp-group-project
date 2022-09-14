@@ -36,6 +36,7 @@ const Header = () => {
                 ? "text-darkGrey opacity-70"
                 : "text-lightGold opacity-50"
             } hover:opacity-100`}
+            onClick={() => setIsOpen(!isOpen)}
           >
             {item.title}
           </Link>
@@ -79,6 +80,7 @@ const Header = () => {
               className={`block text-4xl ${
                 isMatched ? "text-darkGrey" : "text-white"
               }`}
+              onClick={() => setIsOpen(!isOpen)}
             >
               {item.title}
             </Link>
