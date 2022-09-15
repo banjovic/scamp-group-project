@@ -46,7 +46,10 @@ const Header = () => {
         className={`w-7 h-7 mr-4 cursor-pointer ${
           isMatched && "[&_path]:stroke-darkGrey"
         }`}
-        onClick={() => navigate("/cart")}
+        onClick={() => {
+          navigate("/cart");
+          setIsOpen(!isOpen);
+        }}
       />
 
       <button

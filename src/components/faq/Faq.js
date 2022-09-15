@@ -11,17 +11,18 @@ const Faq = () => {
       answer: "Yes, but refund is only valid for 72 hours",
     },
     {
-      question: "Can I pay using Cryptcurrency?",
+      question: "Can I pay using cryptcurrency?",
       answer:
         "Yes, You can pay using cryptocurrencies, We accept only BNB from smartchain",
     },
     {
-      question: "How long does it last before expiring?",
-      answer: "Yes, but refund is only valid for 72 hours",
+      question: "Can I cancel my order?",
+      answer:
+        "Yes, as long as the order has not been shipped, you can cancel your order",
     },
     {
-      question: "Do you do International deliveries?",
-      answer: "Yes, but refund is only valid for 72 hours",
+      question: "What if my Item arrives damaged?",
+      answer: "Please contact us and your issue will be resolved",
     },
   ];
 
