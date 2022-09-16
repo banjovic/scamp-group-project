@@ -1,2 +1,125 @@
-.product-page {
+.product-detail-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 70px;
+  padding-top: 30px;
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+
+  @media screen and (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+
+  .column-one-container {
+    display: flex;
+    flex-direction: column;
+    gap: 41.5px;
+    align-items: flex-start;
+    justify-content: center;
+
+    .product-description-title {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 20px;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 27px;
+      color: #ffd0a8;
+      cursor: pointer;
+    }
+
+    .product-description {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 30px;
+      color: #b2b2b2;
+    }
+
+    .default-description-title {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 27px;
+      color: #b2b2b2;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 20px;
+    }
+  }
+
+  .column-two-container {
+    justify-content: center;
+    align-items: center;
+
+    .product-image-container {
+      align-items: center;
+
+      img {
+        border-radius: 10px !important;
+      }
+    }
+  }
+
+  .column-three-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .product-name-wrapper {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 43px;
+      background: linear-gradient(
+        268.86deg,
+        #ffd0a8 10.03%,
+        rgba(255, 208, 168, 0.62) 118.31%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      //   text-fill-color: transparent;
+    }
+
+    .product-price {
+      font-weight: 600;
+      font-size: 70px;
+      line-height: 95px;
+      color: #ffffff;
+    }
+
+    .product-counter-wrapper {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 37px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: space-between;
+      color: #ffffff;
+      border-top: 1px solid #ffd0a8;
+      border-bottom: 1px solid #ffd0a8;
+      padding: 0 20px;
+
+      .product-counter {
+        cursor: pointer;
+      }
+    }
+
+    button {
+      padding: 12px 40px;
+      background: #ffd0a8;
+      border-radius: 5px;
+    }
+  }
 }

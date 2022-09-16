@@ -400,8 +400,6 @@ const ProductsPage = () => {
           </main>
         </div>
       </div>
-
-      {/* <ProductDetail /> */}
     </div>
   );
 };
