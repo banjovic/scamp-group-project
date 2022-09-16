@@ -12,6 +12,7 @@ import {
   PlusIcon,
   Squares2X2Icon,
 } from "@heroicons/react/20/solid";
+import { Link } from "react-router-dom";
 // import ProductDetail from "../../components/productsFolder/ProductDetail";
 
 const sortOptions = [
@@ -366,7 +367,8 @@ const ProductsPage = () => {
                       <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
                         {ProductItems &&
                           ProductItems.map((product) => (
-                            <a
+                            <Link
+                              to={`/products/${product.id}`}
                               key={product.id}
                               href={product.href}
                               className="group"
@@ -387,7 +389,7 @@ const ProductsPage = () => {
                               <p className="mt-1 text-lg font-medium text-lightGold">
                                 {product.price}
                               </p>
-                            </a>
+                            </Link>
                           ))}
                       </div>
                     </div>

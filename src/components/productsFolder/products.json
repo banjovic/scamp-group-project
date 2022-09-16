@@ -44,14 +44,6 @@
     },
     {
       "id": 6,
-      "name": "Man in a bath jpg",
-      "href": "#",
-      "price": "$40",
-      "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980693/scamp-group-project/24_tfto6w.jpg",
-      "imageAlt": "Bath Bomb"
-    },
-    {
-      "id": 7,
       "name": "Bath bomb et coffee",
       "href": "#",
       "price": "$45",
@@ -59,7 +51,7 @@
       "imageAlt": "Bath Bomb"
     },
     {
-      "id": 8,
+      "id": 7,
       "name": "Bath Bomb Product",
       "href": "#",
       "price": "$30",
@@ -67,7 +59,7 @@
       "imageAlt": "Bath Bomb"
     },
     {
-      "id": 9,
+      "id": 8,
       "name": "Bath Bomb Product 2",
       "href": "#",
       "price": "$40",
@@ -75,7 +67,7 @@
       "imageAlt": "Bath Bomb"
     },
     {
-      "id": 10,
+      "id": 9,
       "name": "Bath Bomb Product 3",
       "href": "#",
       "price": "$35",
@@ -83,7 +75,7 @@
       "imageAlt": "Bath Bomb"
     },
     {
-      "id": 11,
+      "id": 10,
       "name": "Bath Bomb Product 4",
       "href": "#",
       "price": "$80",
@@ -91,7 +83,7 @@
       "imageAlt": "Bath Bomb"
     },
     {
-      "id":12,
+      "id":11,
       "name": "Bath Bomb Products in a rack",
       "href": "#",
       "price": "$100",
@@ -99,7 +91,7 @@
       "imageAlt": "Bath Bomb"
     },
     {
-      "id": 13,
+      "id": 12,
       "name": "Bath Bomb on a Bath Tub",
       "href": "#",
       "price": "$40",
@@ -107,7 +99,7 @@
       "imageAlt": "Bath Bomb"
     },
     {
-      "id": 14,
+      "id": 13,
       "name": "Bath Bomb Product 5",
       "href": "#",
       "price": "$75",
@@ -115,7 +107,7 @@
       "imageAlt": "Bath Bomb"
     },
     {
-      "id": 15,
+      "id": 14,
       "name": "Bath Bomb Product 6",
       "href": "#",
       "price": "$45",
@@ -123,7 +115,7 @@
       "imageAlt": "Bath Bomb"
     },
     {
-      "id": 16,
+      "id": 15,
       "name": "Bath Bomb Product 7",
       "href": "#",
       "price": "$35",
@@ -131,7 +123,7 @@
       "imageAlt": "Bath Bomb"
     },
     {
-      "id": 17,
+      "id": 16,
       "name": "Bath Bomb in Production",
       "href": "#",
       "price": "$70",
@@ -139,7 +131,7 @@
       "imageAlt": "Bath Bomb"
     },
     {
-      "id": 20,
+      "id": 17,
       "name": "Bath Bomb in Production 2",
       "href": "#",
       "price": "$70",
