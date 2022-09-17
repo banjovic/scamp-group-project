@@ -11,7 +11,7 @@ const Faq = () => {
       answer: "Yes, but refund is only valid for 72 hours",
     },
     {
-      question: "Can I pay using cryptcurrency?",
+      question: "Can I pay using cryptocurrency?",
       answer:
         "Yes, You can pay using cryptocurrencies, We accept only BNB from smartchain",
     },

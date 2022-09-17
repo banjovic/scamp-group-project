@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, useMatch, useNavigate } from "react-router-dom";
 
 import { ReactComponent as Cart } from "../../assets/Cart.svg";
+import { CartContext } from "../../context/cart/cart.context";
 
 import "./Header.scss";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { itemsCount } = useContext(CartContext);
   let navigate = useNavigate();
 
   const isMatched = useMatch("/cart");
@@ -42,15 +44,20 @@ const Header = () => {
           </Link>
         ))}
       </nav>
-      <Cart
-        className={`w-7 h-7 mr-4 cursor-pointer ${
-          isMatched && "[&_path]:stroke-darkGrey"
-        }`}
-        onClick={() => {
-          navigate("/cart");
-          setIsOpen(!isOpen);
-        }}
-      />
+      <div className="relative w-7 h-7 mr-4 cursor-pointer">
+        <Cart
+          className={`w-full h-full ${isMatched && "[&_path]:stroke-darkGrey"}`}
+          onClick={() => {
+            navigate("/cart");
+            setIsOpen(!isOpen);
+          }}
+        />
+        <div className="w-4 h-4 bg-lightGold rounded-full absolute top-[-4px] right-[-8px] grid place-items-center">
+          <span className="text-darkGrey text-xs font-semibold">
+            {itemsCount}
+          </span>
+        </div>
+      </div>
 
       <button
         className={`w-11 flex flex-col gap-y-3.5 ${
