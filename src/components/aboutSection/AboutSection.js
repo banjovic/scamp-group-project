@@ -2,9 +2,9 @@ const AboutSection = () => {
   return (
     <section
       aria-labelledby="about-tile"
-      className="space-y-[33px] md:flex md:gap-[33px]"
+      className="space-y-[33px] md:grid md:grid-cols-2 md:gap-[33px]"
     >
-      <div className="md:flex-1 md:self-end">
+      <div className="md:self-end">
         <h2 id="about-title" className="title">
           Our Story
         </h2>
@@ -22,9 +22,9 @@ const AboutSection = () => {
         </p>
       </div>
       <img
-        src="https://images.pexels.com/photos/7175345/pexels-photo-7175345.jpeg?cs=srgb&dl=pexels-marta-dzedyshko-7175345.jpg&fm=jpg"
+        src="https://images.pexels.com/photos/374039/pexels-photo-374039.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         alt="hero section bath bomb feature"
-        className="h-[16.25rem] w-full object-cover md:flex-1 md:max-h-[500px] md:h-full"
+        className="h-[16.25rem] w-full object-cover md:self-end md:max-h-[400px] md:h-full md:max-w-[660px] lg:max-h-[500px]"
       />
     </section>
   );

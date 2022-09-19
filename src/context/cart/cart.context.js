@@ -14,6 +14,7 @@ const defaultValue = {
   clearItemFromCart: () => {},
   decreaseItemInCart: () => {},
   IncreaseItemInCart: () => {},
+  clearCart: () => {},
   itemsCount: 0,
   total: 0,
 };
@@ -27,12 +28,13 @@ export const CartProvider = ({ children }) => {
 
   const updateCartItems = (cartItems) => {
     const newCount = cartItems.reduce(
-      (total, cartItem) => total + cartItem.quantity,
+      (total, cartItem) => (total = total + cartItem.quantity),
       0
     );
 
     const newTotal = cartItems.reduce(
-      (total, cartItem) => total + cartItem.quantity * cartItem.price
+      (total, cartItem) => (total = total + cartItem.quantity * cartItem.price),
+      0
     );
 
     dispatch({
@@ -65,11 +67,16 @@ export const CartProvider = ({ children }) => {
     updateCartItems(newCartItems);
   };
 
+  const clearCart = () => {
+    updateCartItems([]);
+  };
+
   const value = {
     addItemToCart,
     clearItemFromCart,
     decreaseItemInCart,
     increaseItemInCart,
+    clearCart,
     cartItems,
     itemsCount,
     total,
