@@ -49,7 +49,7 @@ const Header = () => {
           className={`w-full h-full ${isMatched && "[&_path]:stroke-darkGrey"}`}
           onClick={() => {
             navigate("/cart");
-            setIsOpen(!isOpen);
+            isOpen && setIsOpen(!isOpen);
           }}
         />
         <div className="w-4 h-4 bg-lightGold rounded-full absolute top-[-4px] right-[-8px] grid place-items-center">
