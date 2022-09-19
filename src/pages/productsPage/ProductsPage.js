@@ -13,7 +13,6 @@ import {
   Squares2X2Icon,
 } from "@heroicons/react/20/solid";
 import { Link } from "react-router-dom";
-// import ProductDetail from "../../components/productsFolder/ProductDetail";
 
 const sortOptions = [
   { name: "Most Popular", href: "#", current: true },
@@ -75,11 +74,6 @@ function classNames(...classes) {
 
 const ProductsPage = () => {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
-  // const [openProductDetail, setOpenProductDetail] = useState(false);
-
-  // const onClickProduct = () => {
-  //   setOpenProductDetail(true);
-  // };
 
   return (
     <div className="container mx-auto mt-10 px-5 product-page">
@@ -372,15 +366,12 @@ const ProductsPage = () => {
                               key={product.id}
                               href={product.href}
                               className="group"
-                              // onClick={() => {
-                              //   onClickProduct();
-                              // }}
                             >
                               <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
                                 <img
                                   src={product.imageSrc}
                                   alt={product.imageAlt}
-                                  className="h-full w-full object-cover object-center group-hover:opacity-75"
+                                  className="h-60 w-full object-cover object-center group-hover:opacity-75"
                                 />
                               </div>
                               <h3 className="mt-4 text-sm text-lightGrey">
