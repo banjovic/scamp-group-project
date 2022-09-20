@@ -1,10 +1,10 @@
-import React from 'react';
-import './about.scss';
+import React from "react";
+import "./about.scss";
 
 const About = () => {
   return (
-    <div className="about-container">
-      <div className="preview">
+    <div className="about-container container mx-auto mt-10 px-5">
+      <div className="preview bg-transparent">
         <div className="text">
           <h1>The most modern and efficient way to treat skin.</h1>
           <p>Radiant, nourished and plumper skin is just 30-minutes away</p>
@@ -23,7 +23,7 @@ const About = () => {
             alt=""
           />
         </div>
-        <div className="info">
+        <div className="info bg-transparent">
           <div>
             <h2>Forget about masking — now we Soke.</h2>
             <p>
@@ -36,7 +36,7 @@ const About = () => {
             <p>
               Not only does Soke work fast, but it also works on your schedule.
               Its incredibly adaptable design seamlessly adheres to your skin
-              without a tacky texture so you can wear it at home or on the go.{' '}
+              without a tacky texture so you can wear it at home or on the go.{" "}
             </p>
             <p>
               Incorporate it into your skincare regime and use as frequently as
@@ -143,7 +143,7 @@ const About = () => {
               used by plastic surgeons to accelerate the healing process of the
               skin) and infused them with a powerful multi-peptide complex to
               create a true hydrogel treatment mask that tightens, plumps and
-              lifts the skin in as little as 30 minutes.{' '}
+              lifts the skin in as little as 30 minutes.{" "}
             </p>
             <p>
               After two clinical trials that reinforced the results we saw, Soke
