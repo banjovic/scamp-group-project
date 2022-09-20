@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 
 import ProductItems from "../../components/productsFolder/products.json";
+import { CartContext } from "../../context/cart/cart.context";
 
 import { StarIcon } from "@heroicons/react/20/solid";
 
@@ -14,6 +15,7 @@ function classNames(...classes) {
 const ProductDetail = () => {
   // useParams helps in getting id from the url
   const params = useParams();
+  const { addItemToCart } = useContext(CartContext);
 
   const data = ProductItems.filter((product) => product.id == params?.id);
   console.log(data);
@@ -112,7 +114,7 @@ const ProductDetail = () => {
           </div>
         </div>
 
-        <div className="product-price">{data[0].price}</div>
+        <div className="product-price">NGN {data[0].price}</div>
 
         <div className="product-counter-wrapper">
           <div
@@ -134,7 +136,12 @@ const ProductDetail = () => {
           </div>
         </div>
 
-        <button>Buy now</button>
+        <button
+          disabled={counter == 0 ? true : false}
+          onClick={() => addItemToCart(data[0], counter)}
+        >
+          Buy now
+        </button>
       </div>
     </div>
   );

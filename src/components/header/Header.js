@@ -38,7 +38,6 @@ const Header = () => {
                 ? "text-darkGrey opacity-70"
                 : "text-lightGold opacity-50"
             } hover:opacity-100`}
-            onClick={() => setIsOpen(!isOpen)}
           >
             {item.title}
           </Link>
@@ -78,9 +77,9 @@ const Header = () => {
       </button>
 
       <nav
-        className={`${isOpen ? "active" : ""} fixed left-0 z-10 w-full pt-12 ${
-          isMatched ? "bg-white" : "bg-darkGrey"
-        } menu-items--mobile md:hidden`}
+        className={`fixed top-[72px] left-0 z-10 w-full pt-12 h-full -translate-x-full transition-transform ${
+          isOpen && "active"
+        }  ${isMatched ? "bg-white" : "bg-darkGrey"}  md:hidden`}
       >
         <div className="container space-y-11 mx-auto px-5">
           {menuItems.map((item, index) => (

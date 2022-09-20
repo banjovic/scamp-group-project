@@ -1,181 +1,178 @@
 [
-    {
-      "id": 1,
-      "name": "Coconut Oil Bath Bomb",
-      "href": "/products/:id",
-      "price": "$48",
-      "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980638/scamp-group-project/3_e3bliw.jpg",
-      "imageAlt": "Bath Bomb"
-    },
-    {
-      "id": 2,
-      "name": "Green Tea Bath Bomb",
-      "href": "/products/:id",
-      "price": "$35",
-      "imageSrc":
-        "https://res.cloudinary.com/dnohok50n/image/upload/v1662980643/scamp-group-project/11_axphbh.jpg",
-      "imageAlt": "Bath Bomb"
-    },
-    {
-      "id": 3,
-      "name": "Purple Bath Bomb",
-      "href": "/products/:id",
-      "price": "$89",
-      "imageSrc":
-        "https://res.cloudinary.com/dnohok50n/image/upload/v1662980640/scamp-group-project/6_e1dfno.jpg",
-      "imageAlt": "Bath Bomb"
-    },
-    {
-      "id": 4,
-      "name": "Love-shaped Bath Bomb",
-      "href": "/products/:id",
-      "price": "$35",
-      "imageSrc":
-        "https://res.cloudinary.com/dnohok50n/image/upload/v1662980637/scamp-group-project/2_cxphii.jpg",
-      "imageAlt": "Bath Bomb"
-    },
-    {
-      "id": 5,
-      "name": "Man in a bath",
-      "href": "/products/:id",
-      "price": "$40",
-      "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980703/scamp-group-project/VA-1_yyyitq.png",
-      "imageAlt": "Bath Bomb"
-    },
-    {
-      "id": 6,
-      "name": "Coffee Bath bomb",
-      "href": "/products/:id",
-      "price": "$45",
-      "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980692/scamp-group-project/20_cyvuai.jpg",
-      "imageAlt": "Bath Bomb"
-    },
-    {
-      "id": 7,
-      "name": "Herbal Bath Bomb",
-      "href": "/products/:id",
-      "price": "$30",
-      "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980688/scamp-group-project/18_a4rw2s.jpg",
-      "imageAlt": "Bath Bomb"
-    },
-    {
-      "id": 8,
-      "name": "Bath Bomb Product 2",
-      "href": "/products/:id",
-      "price": "$40",
-      "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980683/scamp-group-project/23_zzc8mc.jpg",
-      "imageAlt": "Bath Bomb"
-    },
-    {
-      "id": 9,
-      "name": "Bath Bomb Product 3",
-      "href": "/products/:id",
-      "price": "$35",
-      "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980680/scamp-group-project/21_zipcbm.jpg",
-      "imageAlt": "Bath Bomb"
-    },
-    {
-      "id": 10,
-      "name": "Bath Bomb Product 4",
-      "href": "/products/:id",
-      "price": "$80",
-      "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980679/scamp-group-project/22_cshyc4.jpg",
-      "imageAlt": "Bath Bomb"
-    },
-    {
-      "id":11,
-      "name": "Bath Bomb Products in a rack",
-      "href": "/products/:id",
-      "price": "$100",
-      "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980669/scamp-group-project/17_vhrhwe.jpg",
-      "imageAlt": "Bath Bomb"
-    },
-    {
-      "id": 12,
-      "name": "Bath Bomb on a Bath Tub",
-      "href": "/products/:id",
-      "price": "$40",
-      "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980669/scamp-group-project/16_zwjwld.jpg",
-      "imageAlt": "Bath Bomb"
-    },
-    {
-      "id": 13,
-      "name": "Bath Bomb Product 5",
-      "href": "/products/:id",
-      "price": "$75",
-      "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980667/scamp-group-project/15_tdtyl2.jpg",
-      "imageAlt": "Bath Bomb"
-    },
-    {
-      "id": 14,
-      "name": "Bath Bomb Product 6",
-      "href": "/products/:id",
-      "price": "$45",
-      "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980665/scamp-group-project/19_b6bhik.jpg",
-      "imageAlt": "Bath Bomb"
-    },
-    {
-      "id": 15,
-      "name": "Bath Bomb Product 7",
-      "href": "/products/:id",
-      "price": "$35",
-      "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980657/scamp-group-project/14_ynxhhg.jpg",
-      "imageAlt": "Bath Bomb"
-    },
-    {
-      "id": 16,
-      "name": "Bath Bomb in Production",
-      "href": "/products/:id",
-      "price": "$70",
-      "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980645/scamp-group-project/12_h22qt5.jpg",
-      "imageAlt": "Bath Bomb"
-    },
-    {
-      "id": 17,
-      "name": "Bath Bomb in Production 2",
-      "href": "/products/:id",
-      "price": "$70",
-      "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980637/scamp-group-project/1_grzagt.jpg",
-      "imageAlt": "Bath Bomb"
-    },
-    {
-      "id": 18,
-      "name": "Bath Bomb Product 8",
-      "href": "/products/:id",
-      "price": "$40",
-      "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980639/scamp-group-project/8_p4llm8.jpg",
-      "imageAlt": "Bath Bomb"
-    },
-    {
-      "id": 19,
-      "name": "Bath Bomb Product 9",
-      "href": "/products/:id",
-      "price": "$60",
-      "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980638/scamp-group-project/9_dbgqvl.jpg",
-      "imageAlt": "Bath Bomb"
-    },
-    {
-      "id": 20,
-      "name": "Bath Bomb Product 10",
-      "href": "/products/:id",
-      "price": "$50",
-      "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980637/scamp-group-project/0_txepse.jpg",
-      "imageAlt": "Bath Bomb"
-    },
-    {
-      "id": 21,
-      "name": "Bath Bomb Product 11",
-      "href": "/products/:id",
-      "price": "$55",
-      "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980637/scamp-group-project/5_lgppq7.jpg",
-      "imageAlt": "Bath Bomb"
-    },
-    {
-      "id": 22,
-      "name": "Rainbow Bath Bomb",
-      "href": "/products/:id",
-      "price": "$50",
-      "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980637/scamp-group-project/4_jibej3.jpg",
-      "imageAlt": "Bath Bomb"
-    }
+  {
+    "id": 1,
+    "name": "Coconut Oil Bath Bomb",
+    "href": "/products/:id",
+    "price": 4800,
+    "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980638/scamp-group-project/3_e3bliw.jpg",
+    "imageAlt": "Bath Bomb"
+  },
+  {
+    "id": 2,
+    "name": "Green Tea Bath Bomb",
+    "href": "/products/:id",
+    "price": 3500,
+    "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980643/scamp-group-project/11_axphbh.jpg",
+    "imageAlt": "Bath Bomb"
+  },
+  {
+    "id": 3,
+    "name": "Purple Bath Bomb",
+    "href": "/products/:id",
+    "price": 8900,
+    "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980640/scamp-group-project/6_e1dfno.jpg",
+    "imageAlt": "Bath Bomb"
+  },
+  {
+    "id": 4,
+    "name": "Love-shaped Bath Bomb",
+    "href": "/products/:id",
+    "price": 3500,
+    "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980637/scamp-group-project/2_cxphii.jpg",
+    "imageAlt": "Bath Bomb"
+  },
+  {
+    "id": 5,
+    "name": "Man in a bath",
+    "href": "/products/:id",
+    "price": 4000,
+    "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980703/scamp-group-project/VA-1_yyyitq.png",
+    "imageAlt": "Bath Bomb"
+  },
+  {
+    "id": 6,
+    "name": "Coffee Bath bomb",
+    "href": "/products/:id",
+    "price": 4500,
+    "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980692/scamp-group-project/20_cyvuai.jpg",
+    "imageAlt": "Bath Bomb"
+  },
+  {
+    "id": 7,
+    "name": "Herbal Bath Bomb",
+    "href": "/products/:id",
+    "price": 3000,
+    "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980688/scamp-group-project/18_a4rw2s.jpg",
+    "imageAlt": "Bath Bomb"
+  },
+  {
+    "id": 8,
+    "name": "Bath Bomb Product 2",
+    "href": "/products/:id",
+    "price": 4000,
+    "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980683/scamp-group-project/23_zzc8mc.jpg",
+    "imageAlt": "Bath Bomb"
+  },
+  {
+    "id": 9,
+    "name": "Bath Bomb Product 3",
+    "href": "/products/:id",
+    "price": 3500,
+    "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980680/scamp-group-project/21_zipcbm.jpg",
+    "imageAlt": "Bath Bomb"
+  },
+  {
+    "id": 10,
+    "name": "Bath Bomb Product 4",
+    "href": "/products/:id",
+    "price": 8000,
+    "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980679/scamp-group-project/22_cshyc4.jpg",
+    "imageAlt": "Bath Bomb"
+  },
+  {
+    "id": 11,
+    "name": "Bath Bomb Products in a rack",
+    "href": "/products/:id",
+    "price": 1000,
+    "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980669/scamp-group-project/17_vhrhwe.jpg",
+    "imageAlt": "Bath Bomb"
+  },
+  {
+    "id": 12,
+    "name": "Bath Bomb on a Bath Tub",
+    "href": "/products/:id",
+    "price": 4000,
+    "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980669/scamp-group-project/16_zwjwld.jpg",
+    "imageAlt": "Bath Bomb"
+  },
+  {
+    "id": 13,
+    "name": "Bath Bomb Product 5",
+    "href": "/products/:id",
+    "price": 7500,
+    "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980667/scamp-group-project/15_tdtyl2.jpg",
+    "imageAlt": "Bath Bomb"
+  },
+  {
+    "id": 14,
+    "name": "Bath Bomb Product 6",
+    "href": "/products/:id",
+    "price": 4500,
+    "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980665/scamp-group-project/19_b6bhik.jpg",
+    "imageAlt": "Bath Bomb"
+  },
+  {
+    "id": 15,
+    "name": "Bath Bomb Product 7",
+    "href": "/products/:id",
+    "price": 3500,
+    "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980657/scamp-group-project/14_ynxhhg.jpg",
+    "imageAlt": "Bath Bomb"
+  },
+  {
+    "id": 16,
+    "name": "Bath Bomb in Production",
+    "href": "/products/:id",
+    "price": 7000,
+    "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980645/scamp-group-project/12_h22qt5.jpg",
+    "imageAlt": "Bath Bomb"
+  },
+  {
+    "id": 17,
+    "name": "Bath Bomb in Production 2",
+    "href": "/products/:id",
+    "price": 7000,
+    "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980637/scamp-group-project/1_grzagt.jpg",
+    "imageAlt": "Bath Bomb"
+  },
+  {
+    "id": 18,
+    "name": "Bath Bomb Product 8",
+    "href": "/products/:id",
+    "price": 4000,
+    "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980639/scamp-group-project/8_p4llm8.jpg",
+    "imageAlt": "Bath Bomb"
+  },
+  {
+    "id": 19,
+    "name": "Bath Bomb Product 9",
+    "href": "/products/:id",
+    "price": 6000,
+    "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980638/scamp-group-project/9_dbgqvl.jpg",
+    "imageAlt": "Bath Bomb"
+  },
+  {
+    "id": 20,
+    "name": "Bath Bomb Product 10",
+    "href": "/products/:id",
+    "price": 5000,
+    "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980637/scamp-group-project/0_txepse.jpg",
+    "imageAlt": "Bath Bomb"
+  },
+  {
+    "id": 21,
+    "name": "Bath Bomb Product 11",
+    "href": "/products/:id",
+    "price": 5500,
+    "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980637/scamp-group-project/5_lgppq7.jpg",
+    "imageAlt": "Bath Bomb"
+  },
+  {
+    "id": 22,
+    "name": "Rainbow Bath Bomb",
+    "href": "/products/:id",
+    "price": 5000,
+    "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980637/scamp-group-project/4_jibej3.jpg",
+    "imageAlt": "Bath Bomb"
+  }
 ]

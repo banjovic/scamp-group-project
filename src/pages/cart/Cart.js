@@ -62,7 +62,7 @@ const Cart = () => {
               <h2 className="font-normal uppercase text-sm">Total</h2>
             </div>
             {cartItems.map((cartItem) => {
-              const { id, name, imgUrl, description, price, quantity } =
+              const { id, name, imageSrc, description, price, quantity } =
                 cartItem;
               return (
                 <div
@@ -70,7 +70,12 @@ const Cart = () => {
                   className="pt-5 pb-2 grid grid-cols-3 gap-y-2 border-b-[1px] border-grey last:border-b-0 md:grid-cols-4 md:place-items-center"
                 >
                   <div className="col-span-3 flex gap-3 md:col-span-1 md:order-1">
-                    <img src={imgUrl} alt="Bath bomb" height={80} width={80} />
+                    <img
+                      src={imageSrc}
+                      alt="Bath bomb"
+                      height={80}
+                      width={80}
+                    />
                     <div>
                       <h3 className="uppercase font-normal text-base">
                         {name}
