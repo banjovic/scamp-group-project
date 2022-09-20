@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const AboutSection = () => {
   return (
     <section
@@ -20,6 +22,9 @@ const AboutSection = () => {
           consectetur adipiscing elit. Eget eu ut facilisis rhoncus morbi. Lorem
           ultrices blandit quam quam.{" "}
         </p>
+        <Link to={"/about"}>
+          <p className="text-lightGold pt-2 italic">Read More...</p>
+        </Link>
       </div>
       <img
         src="https://images.pexels.com/photos/374039/pexels-photo-374039.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"

@@ -11,6 +11,7 @@ import Cart from "./pages/cart/Cart";
 import ProductsPage from "./pages/productsPage/ProductsPage";
 import ProductDetail from "./pages/productsPage/ProductDetail";
 import PageNotFound from "./pages/pageNotFound/PageNotFound";
+import About from "./pages/about/About";
 
 import "./index.scss";
 
@@ -25,6 +26,8 @@ root.render(
             <Route path="/products" element={<ProductsPage />} />
             <Route path="/products/:id" element={<ProductDetail />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/about" element={<About />} />
+
             {/* Kindly don't add any other route below the 404 path */}
             <Route path="*" element={<PageNotFound />} />
           </Route>
@@ -33,8 +36,3 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
