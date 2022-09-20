@@ -1,0 +1,80 @@
+@mixin roundedRectangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 283px;
+  height: 384px;
+  border-radius: inherit;
+  border: 2px solid theme("colors.darkGold");
+  opacity: 0.3;
+  z-index: -1;
+
+  @screen lg {
+    height: 500px;
+    width: 100%;
+  }
+}
+
+.hero-section {
+  &__image-wrapper {
+    position: relative;
+    height: 416px;
+    border-radius: 235px;
+    z-index: 1;
+
+    &::before {
+      @include roundedRectangle;
+      transform: matrix(1, -0.05, 0.05, 1, -11, 23);
+    }
+
+    &::after {
+      @include roundedRectangle;
+      transform: matrix(0.96, -0.27, 0.27, 0.96, -18, 14);
+    }
+
+    img {
+      border-radius: inherit;
+      object-fit: cover;
+      width: 283px;
+      height: 384px;
+    }
+
+    @screen md {
+      flex: 1;
+      max-width: 400px;
+    }
+
+    @screen lg {
+      height: 600px;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+.stamp {
+  position: relative;
+  display: grid;
+  place-items: center;
+  //   animation: name duration timing-function delay iteration-count direction fill-mode;
+  svg {
+    animation: rotate 6s forwards infinite linear;
+    transform: rotate(0deg);
+  }
+
+  .shop {
+    position: absolute;
+    font-size: 25px;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,14 +1,19 @@
-// import './App.css';
-import Footer from './components/footer/Footer';
+import { Outlet } from "react-router-dom";
+import { useMatch } from "react-router-dom";
 
-function App() {
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
+
+const App = () => {
+  const isMatched = useMatch("/cart");
+
   return (
-    <div className="App">
-      <header className="App-header">App</header>
-      react
+    <div className={`${isMatched ? "bg-white" : "bg-darkGrey"}`}>
+      <Header />
+      <Outlet />
       <Footer />
     </div>
   );
-}
+};
 
 export default App;
