@@ -1,7 +1,6 @@
 import AboutSection from "../../components/aboutSection/AboutSection";
 import Contact from "../../components/contact/Contact";
 import Faq from "../../components/faq/Faq";
-import Footer from "../../components/footer/Footer";
 import HeroSection from "../../components/heroSection/HeroSection";
 import Newsletter from "../../components/newsletter/newsletter";
 
@@ -15,7 +14,6 @@ const HomePage = () => {
       <Faq />
       <Newsletter />
       <Contact />
-      <Footer />
     </div>
   );
 };

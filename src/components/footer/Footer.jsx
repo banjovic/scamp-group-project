@@ -4,7 +4,7 @@ import "./footer.scss";
 const Footer = () => {
   return (
     <Fragment>
-      <div className="footer bg-darkGrey container mx-auto mt-10 px-5">
+      <div className="footer bg-darkGrey container mx-auto px-5">
         <div className="footer-top">
           <div className="left">
             <h1 className="text-gold mt-2">Scribbs</h1>
