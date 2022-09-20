@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { usePaystackPayment } from "react-paystack";
 
 import { ReactComponent as BathBowl } from "../../assets/Bath bowl.svg";
 
@@ -11,8 +12,27 @@ const Cart = () => {
     clearItemFromCart,
     decreaseItemInCart,
     increaseItemInCart,
+    clearCart,
     total,
   } = useContext(CartContext);
+
+  const config = {
+    reference: new Date().getTime().toString(),
+    email: "johnDoe@gmail.com",
+    amount: total * 100,
+    publicKey: "pk_test_cf22779830ec46ef8f81416b3dda2123c6a96b70",
+  };
+
+  const onSuccess = () => {
+    clearCart();
+    navigate("/");
+  };
+
+  const onClose = () => {
+    console.log("closed");
+  };
+
+  const initializePayment = usePaystackPayment(config);
 
   let navigate = useNavigate();
 
@@ -62,18 +82,18 @@ const Cart = () => {
                     NGN {price}
                   </span>
                   <span
-                    className="underline underline-offset-2 uppercase text-sm md:order-5 md:justify-self-start"
+                    className="underline underline-offset-2 uppercase text-sm md:order-5 md:justify-self-start cursor-pointer"
                     onClick={() => clearItemFromCart(cartItem)}
                   >
                     remove
                   </span>
                   <div className="justify-self-center border border-darkGrey px-2 py-[2px] space-x-4 md:order-3">
-                    <button onClick={() => increaseItemInCart(cartItem)}>
-                      +
-                    </button>
-                    <span>{quantity}</span>
                     <button onClick={() => decreaseItemInCart(cartItem)}>
                       -
+                    </button>
+                    <span>{quantity}</span>
+                    <button onClick={() => increaseItemInCart(cartItem)}>
+                      +
                     </button>
                   </div>
                   <span className="justify-self-center  md:order-4">
@@ -86,7 +106,10 @@ const Cart = () => {
           <h4 className="self-end">
             Total: <span>NGN {total}</span>
           </h4>
-          <button className="bg-darkGold px-3 h-[50px] max-w-[350px] w-full self-end uppercase font-semibold">
+          <button
+            className="bg-darkGold px-3 h-[50px] max-w-[350px] w-full self-end uppercase font-semibold"
+            onClick={() => initializePayment(onSuccess, onClose)}
+          >
             Proceed to Checkout
           </button>
         </div>

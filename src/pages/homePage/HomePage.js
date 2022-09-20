@@ -14,7 +14,6 @@ const HomePage = () => {
       <Faq />
       <Newsletter />
       <Contact />
-      <div className="h-52"></div>
     </div>
   );
 };

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ReactComponent as Stamp } from "../../assets/Stamp.svg";
 
 import "./HeroSection.scss";
@@ -14,14 +15,14 @@ const HeroSection = () => {
           amet, dolor tellus enim. Blandit in sed enim dictum turpis purus ante
           duis.
         </p>
-        <div className="stamp">
+        <Link to="/products" className="stamp">
           <Stamp />
           <h2 className="shop text-gold">shop</h2>
-        </div>
+        </Link>
       </div>
       <div className="self-end pt-6 hero-section__image-wrapper md:self-start">
         <img
-          src="https://images.pexels.com/photos/7175345/pexels-photo-7175345.jpeg?cs=srgb&dl=pexels-marta-dzedyshko-7175345.jpg&fm=jpg"
+          src="https://images.pexels.com/photos/7175329/pexels-photo-7175329.jpeg?auto=compress&cs=tinysrgb&w=600"
           alt="hero section bath bomb feature"
         />
       </div>
