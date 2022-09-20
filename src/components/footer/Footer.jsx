@@ -1,45 +1,72 @@
-import React, { Fragment } from 'react';
-import './footer.scss';
+import React, { Fragment } from "react";
+import "./footer.scss";
 
 const Footer = () => {
   return (
     <Fragment>
-      <div className="footer">
+      <div className="footer bg-darkGrey container mx-auto mt-10 px-5">
         <div className="footer-top">
           <div className="left">
-            <h1>Scribbs</h1>
-            <h2>Hair that shines so bright! So Bright!!</h2>
-            <p>
+            <h1 className="text-gold mt-2">Scribbs</h1>
+            <h2 className="text-lightGrey">
+              Hair that shines so bright! So Bright!!
+            </h2>
+            <p className="text-lightGrey">
               Visiting our place will be a whole lot of different experience.
             </p>
           </div>
-          <div className="center1">
-            <h1>Menu</h1>
-            <a href="/">Home</a>
-            <a href="/">Products</a>
-            <a href="/">About</a>
-            <a href="/">FAQ</a>
-            <a href="/">Contact</a>
-          </div>
-          <div className="center2">
-            <h1>Social</h1>
-            <a href="/">Instagram</a>
-            <a href="/">Facebook</a>
-            <a href="/">Twitter</a>
-          </div>
-          <div className="right">
-            <h1>Contacts</h1>
-            <div>
-              <h1>Email:</h1>
-              <p>hello@scribbsbeauty.com</p>
+
+          <div className="footer-other-half">
+            <div className="center1">
+              <h1 className="text-gold">Menu</h1>
+              <a href="/" className="text-lightGrey">
+                Home
+              </a>
+              <a href="/" className="text-lightGrey">
+                Products
+              </a>
+              <a href="/" className="text-lightGrey">
+                About
+              </a>
+              <a href="/" className="text-lightGrey">
+                FAQ
+              </a>
+              <a href="/" className="text-lightGrey">
+                Contact
+              </a>
             </div>
-            <div>
-              <h1>Phone:</h1>
-              <p>+1(456)234 4532</p>
+
+            <div className="center2">
+              <h1 className="text-gold">Social</h1>
+              <a href="/" className="text-lightGrey">
+                Instagram
+              </a>
+              <a href="/" className="text-lightGrey">
+                Facebook
+              </a>
+              <a href="/" className="text-lightGrey">
+                Twitter
+              </a>
             </div>
-            <div>
-              <h1>Address:</h1>
-              <p>No 24/34b Mainlande, Winstom, 14450, California, USA.</p>
+
+            <div className="right">
+              <h1 className="text-gold">Contacts</h1>
+              <div className="inner-right">
+                <div>
+                  <h1 className="text-white">Email:</h1>
+                  <p className="text-lightGrey">hello@scribbsbeauty.com</p>
+                </div>
+                <div>
+                  <h1 className="text-white">Phone:</h1>
+                  <p className="text-lightGrey">+1(456)234 4532</p>
+                </div>
+                <div>
+                  <h1 className="text-white">Address:</h1>
+                  <p className="text-lightGrey">
+                    No 24/34b Mainlande, Winstom, 14450, California, USA.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
