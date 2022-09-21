@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 import ProductItems from "../../components/productsFolder/products.json";
 import { CartContext } from "../../context/cart/cart.context";
@@ -41,7 +41,7 @@ const ProductDetail = () => {
         <Link to={"/products"}>
           <div className="text-lightGrey">Products</div>
         </Link>
-        \<div className="text-gold"> ProductDetail</div>
+        <div className="text-gold"> ProductDetail</div>
       </div>
 
       <div className="product-detail-page-content-wrapper">
@@ -145,7 +145,8 @@ const ProductDetail = () => {
           </div>
 
           <button
-            disabled={counter == 0 ? true : false}
+            className="buy-now"
+            // disabled={counter == 0 ? true : false}
             onClick={() => addItemToCart(data[0], counter)}
           >
             Buy now
