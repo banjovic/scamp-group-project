@@ -41,7 +41,7 @@ const ProductDetail = () => {
         <Link to={"/products"}>
           <div className="text-lightGrey">Products</div>
         </Link>
-        <div className="text-gold"> ProductDetail</div>
+        /<div className="text-gold"> ProductDetail</div>
       </div>
 
       <div className="product-detail-page-content-wrapper">
@@ -146,7 +146,7 @@ const ProductDetail = () => {
 
           <button
             className="buy-now"
-            // disabled={counter == 0 ? true : false}
+            disabled={counter == 0 ? true : false}
             onClick={() => addItemToCart(data[0], counter)}
           >
             Buy now
