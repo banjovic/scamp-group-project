@@ -4,7 +4,7 @@ const AboutSection = () => {
   return (
     <section
       aria-labelledby="about-tile"
-      className="space-y-[33px] md:grid md:grid-cols-2 md:gap-[33px]"
+      className="space-y-[33px] md:grid md:grid-cols-2 md:gap-[33px] md:pt-10"
     >
       <div className="md:self-end">
         <h2 id="about-title" className="title">

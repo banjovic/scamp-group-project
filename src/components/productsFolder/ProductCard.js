@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
+import { CartContext } from "../../context/cart/cart.context";
+import { ReactComponent as Cart } from "../../assets/Cart.svg";
+
 const ProductCard = ({ product }) => {
+  const { addItemToCart } = useContext(CartContext);
   return (
-    <div>
+    <div className="max-w-xs w-full mx-auto">
       <Link
         to={`/products/${product.id}`}
         key={product.id}
@@ -14,33 +18,21 @@ const ProductCard = ({ product }) => {
           <img
             src={product.imageSrc}
             alt={product.imageAlt}
-            className="h-60 w-full object-cover object-center group-hover:opacity-75"
+            className="h-60 w-full object-cover object-center group-hover:opacity-75 md:w-60"
           />
         </div>
         <h3 className="mt-4 text-sm text-lightGrey">{product.name}</h3>
-        <p className="mt-1 text-lg font-medium text-lightGold">
-          {product.price}
-        </p>
       </Link>
-
-      <div className="text-lightGrey text-sm flex-row flex justify-end text-end">
-        <button className="flex-row flex justify-end gap-2 hover:text-lightGold">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="w-6 h-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
-            />
-          </svg>
-          Add to Cart
-        </button>
+      <div className="flex justify-between">
+        <p className="mt-1 text-lg font-medium text-lightGold">
+          NGN {product.price}
+        </p>
+        <Cart
+          className="cursor-pointer w-6 h-6"
+          onClick={() => {
+            addItemToCart(product, 1);
+          }}
+        />
       </div>
     </div>
   );
