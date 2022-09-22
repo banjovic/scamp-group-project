@@ -9,7 +9,7 @@ import "./HomePage.scss";
 
 const HomePage = () => {
   return (
-    <div className="container mx-auto mt-10 px-5 space-y-10">
+    <div className="container mx-auto mt-10 px-5 space-y-20">
       <HeroSection />
       <ProductsSection />
       <AboutSection />

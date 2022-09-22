@@ -1,11 +1,16 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { CartContext } from "../../context/cart/cart.context";
 import { ReactComponent as Cart } from "../../assets/Cart.svg";
+import ToastNotification from "../toastNotification/ToastNotification";
 
 const ProductCard = ({ product }) => {
   const { addItemToCart } = useContext(CartContext);
+
+  // useState for the toast notification
+  const [show, setShow] = useState(false);
+
   return (
     <div className="max-w-xs w-full mx-auto">
       <Link
@@ -31,9 +36,12 @@ const ProductCard = ({ product }) => {
           className="cursor-pointer w-6 h-6"
           onClick={() => {
             addItemToCart(product, 1);
+            setShow(true);
           }}
         />
       </div>
+
+      <ToastNotification setShow={setShow} show={show} />
     </div>
   );
 };

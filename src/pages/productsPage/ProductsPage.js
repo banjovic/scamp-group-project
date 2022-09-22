@@ -1,7 +1,6 @@
 import React, { useState, Fragment } from "react";
 import "./ProductsPage.scss";
 import ProductItems from "../../components/productsFolder/products.json";
-// import Product1 from "../../assets/images/VA4.png";
 
 import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
@@ -10,16 +9,8 @@ import {
   FunnelIcon,
   MinusIcon,
   PlusIcon,
-  Squares2X2Icon,
 } from "@heroicons/react/20/solid";
 import ProductCard from "../../components/productsFolder/ProductCard";
-
-const sortOptions = [
-  { name: "Best Rating", href: "#", current: true },
-  { name: "Newest", href: "#", current: false },
-  { name: "Price: Low to High", href: "#", current: false },
-  { name: "Price: High to Low", href: "#", current: false },
-];
 
 const subCategories = [
   { name: "Bath Bombs Singles", href: "#" },
@@ -48,6 +39,31 @@ function classNames(...classes) {
 
 const ProductsPage = () => {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+
+  const [filteredProducts, setFilteredProducts] = useState(ProductItems);
+  const lowToHigh = () => {
+    const newProducts = filteredProducts.sort((a, b) => a.price - b.price);
+    setFilteredProducts(newProducts);
+  };
+  const highToLow = () => {
+    const newProducts = filteredProducts.sort((a, b) => b.price - a.price);
+    setFilteredProducts(newProducts);
+  };
+
+  const sortOptions = [
+    {
+      name: "Price: Low to High",
+      href: "#",
+      current: true,
+      sortFunc: lowToHigh,
+    },
+    {
+      name: "Price: High to Low",
+      href: "#",
+      current: false,
+      sortFunc: highToLow,
+    },
+  ];
 
   return (
     <div className="container mx-auto mt-10 px-5 product-page">
@@ -180,7 +196,7 @@ const ProductsPage = () => {
           <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex items-baseline justify-between border-b border-gray-200 pt-24 pb-6">
               <h1 className="text-4xl font-bold tracking-tight text-lightGold">
-                New Arrivals
+                Products
               </h1>
 
               <div className="flex items-center">
@@ -211,6 +227,7 @@ const ProductsPage = () => {
                             {({ active }) => (
                               <a
                                 href={option.href}
+                                onClick={option.sortFunc}
                                 className={classNames(
                                   option.current
                                     ? "font-medium text-gray-900"
@@ -234,7 +251,6 @@ const ProductsPage = () => {
                   className="-m-2 ml-5 p-2 text-gray-400 hover:text-gray-500 sm:ml-7"
                 >
                   <span className="sr-only">View grid</span>
-                  <Squares2X2Icon className="h-5 w-5" aria-hidden="true" />
                 </button>
                 <button
                   type="button"
@@ -333,8 +349,8 @@ const ProductsPage = () => {
                       <h2 className="sr-only">Products</h2>
 
                       <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-                        {ProductItems &&
-                          ProductItems.map((product) => (
+                        {filteredProducts &&
+                          filteredProducts.map((product) => (
                             <ProductCard key={product.id} product={product} />
                           ))}
                       </div>
