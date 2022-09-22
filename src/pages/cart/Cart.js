@@ -55,12 +55,12 @@ const Cart = () => {
       ) : (
         <div className="space-y-5 w-11/12 mx-auto my-8 flex flex-col">
           <div className="bg-transparent px-4 pb-4">
-            <div className="hidden md:grid grid-cols-4 place-items-center py-2 border-b-[2px] border-solid border-darkGold">
+            <div className="hidden md:grid grid-cols-4 place-items-center py-2 border-b-[2px] border-solid border-gold">
               {["Products", "Price", "Quantity", "Total"].map(
                 (title, index) => (
                   <h2
                     key={index}
-                    className="font-600 uppercase text-sm text-darkGold"
+                    className="font-600 uppercase text-sm text-gold"
                   >
                     {title}
                   </h2>

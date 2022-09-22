@@ -33,37 +33,39 @@ const filters = [
   },
 ];
 
+const sortOptions = [
+  { name: "Default" },
+  { name: "Price: Low to High" },
+  { name: "Price: High to Low" },
+];
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 const ProductsPage = () => {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+  const [filteredProducts, setFilteredProducts] = useState([...ProductItems]);
+  const [activeOption, setActiveOption] = useState(sortOptions[0].name);
 
-  const [filteredProducts, setFilteredProducts] = useState(ProductItems);
-  const lowToHigh = () => {
-    const newProducts = filteredProducts.sort((a, b) => a.price - b.price);
-    setFilteredProducts(newProducts);
-  };
-  const highToLow = () => {
-    const newProducts = filteredProducts.sort((a, b) => b.price - a.price);
-    setFilteredProducts(newProducts);
-  };
+  const sortProducts = (option) => {
+    if (option == "Price: Low to High") {
+      const newProducts = filteredProducts.sort((a, b) => a.price - b.price);
 
-  const sortOptions = [
-    {
-      name: "Price: Low to High",
-      href: "#",
-      current: true,
-      sortFunc: lowToHigh,
-    },
-    {
-      name: "Price: High to Low",
-      href: "#",
-      current: false,
-      sortFunc: highToLow,
-    },
-  ];
+      setFilteredProducts([...newProducts]);
+      setActiveOption(sortOptions[1].name);
+    } else if (option == "Price: High to Low") {
+      const newProducts = filteredProducts.sort((a, b) => b.price - a.price);
+
+      setFilteredProducts([...newProducts]);
+      setActiveOption(sortOptions[2].name);
+    } else if (option == "Default") {
+      const newProducts = filteredProducts.sort((a, b) => a.id - b.id);
+
+      setFilteredProducts([...newProducts]);
+      setActiveOption(sortOptions[0].name);
+    }
+  };
 
   return (
     <div className="container mx-auto mt-10 px-5 product-page">
@@ -224,21 +226,20 @@ const ProductsPage = () => {
                       <div className="py-1">
                         {sortOptions.map((option) => (
                           <Menu.Item key={option.name}>
-                            {({ active }) => (
-                              <a
-                                href={option.href}
-                                onClick={option.sortFunc}
-                                className={classNames(
-                                  option.current
-                                    ? "font-medium text-gray-900"
-                                    : "text-gray-500",
-                                  active ? "bg-gray-100" : "",
-                                  "block px-4 py-2 text-sm"
-                                )}
-                              >
-                                {option.name}
-                              </a>
-                            )}
+                            <button
+                              onClick={() => sortProducts(option.name)}
+                              className={classNames(
+                                activeOption == option.name
+                                  ? "font-medium text-gray-900"
+                                  : "text-gray-500",
+                                activeOption == option.name
+                                  ? "bg-gray-100"
+                                  : "",
+                                "w-full px-4 py-2 text-sm text-start"
+                              )}
+                            >
+                              {option.name}
+                            </button>
                           </Menu.Item>
                         ))}
                       </div>
