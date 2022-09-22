@@ -44,7 +44,7 @@ const Cart = () => {
       {cartItems.length === 0 ? (
         <div className="w-full h-[60vh] px-5 pt-12 flex flex-col justify-center items-center">
           <BathBowl />
-          <p className="text-black mb-6">Looks like your cart is empty.</p>
+          <p className=" mb-6">Looks like your cart is empty.</p>
           <button
             className="w-full border-none outline-none bg-darkGold text-darkGrey py-3 px-[10px] max-w-[300px]"
             onClick={() => navigate("/")}
@@ -54,29 +54,30 @@ const Cart = () => {
         </div>
       ) : (
         <div className="space-y-5 w-11/12 mx-auto my-8 flex flex-col">
-          <div className="bg-veryLightGrey px-4">
+          <div className="bg-lightGrey px-4 pb-4">
             <div className="hidden md:grid grid-cols-4 place-items-center py-2 border-b-[1px] border-solid border-black">
-              <h2 className="font-normal uppercase text-sm">Product</h2>
-              <h2 className="font-normal uppercase text-sm">Price</h2>
-              <h2 className="font-normal uppercase text-sm">Quantity</h2>
-              <h2 className="font-normal uppercase text-sm">Total</h2>
+              {["Products", "Price", "Quantity", "Total"].map(
+                (title, index) => (
+                  <h2 key={index} className="font-normal uppercase text-sm">
+                    {title}
+                  </h2>
+                )
+              )}
             </div>
             {cartItems.map((cartItem) => {
-              const { id, name, imgUrl, description, price, quantity } =
-                cartItem;
+              const { id, name, imageSrc, price, quantity } = cartItem;
               return (
                 <div
                   key={id}
                   className="pt-5 pb-2 grid grid-cols-3 gap-y-2 border-b-[1px] border-grey last:border-b-0 md:grid-cols-4 md:place-items-center"
                 >
-                  <div className="col-span-3 flex gap-3 md:col-span-1 md:order-1">
-                    <img src={imgUrl} alt="Bath bomb" height={80} width={80} />
-                    <div>
-                      <h3 className="uppercase font-normal text-base">
-                        {name}
-                      </h3>
-                      <p className="text-darkGrey text-sm">{description}</p>
-                    </div>
+                  <div className="justify-self-start col-span-3 flex gap-3 md:col-span-1 md:order-1">
+                    <img
+                      src={imageSrc}
+                      alt="Bath bomb"
+                      className="max-w-[80px] w-full h-[60px]"
+                    />
+                    <h3 className="uppercase font-normal text-base">{name}</h3>
                   </div>
                   <span className="hidden md:block  md:order-2">
                     NGN {price}
@@ -87,7 +88,7 @@ const Cart = () => {
                   >
                     remove
                   </span>
-                  <div className="justify-self-center border border-darkGrey px-2 py-[2px] space-x-4 md:order-3">
+                  <div className="justify-self-start border border-darkGrey px-2 py-[2px] space-x-4 md:justify-self-center md:order-3">
                     <button onClick={() => decreaseItemInCart(cartItem)}>
                       -
                     </button>
@@ -96,14 +97,14 @@ const Cart = () => {
                       +
                     </button>
                   </div>
-                  <span className="justify-self-center  md:order-4">
+                  <span className="justify-self-center md:order-4">
                     NGN {price * quantity}
                   </span>
                 </div>
               );
             })}
           </div>
-          <h4 className="self-end">
+          <h4 className="self-end text-lightGrey">
             Total: <span>NGN {total}</span>
           </h4>
           <button

@@ -12,58 +12,32 @@ import {
   PlusIcon,
   Squares2X2Icon,
 } from "@heroicons/react/20/solid";
-import { Link } from "react-router-dom";
+import ProductCard from "../../components/productsFolder/ProductCard";
 
 const sortOptions = [
-  { name: "Most Popular", href: "#", current: true },
-  { name: "Best Rating", href: "#", current: false },
+  { name: "Best Rating", href: "#", current: true },
   { name: "Newest", href: "#", current: false },
   { name: "Price: Low to High", href: "#", current: false },
   { name: "Price: High to Low", href: "#", current: false },
 ];
 
 const subCategories = [
-  { name: "Totes", href: "#" },
-  { name: "Backpacks", href: "#" },
-  { name: "Travel Bags", href: "#" },
-  { name: "Hip Bags", href: "#" },
-  { name: "Laptop Sleeves", href: "#" },
+  { name: "Bath Bombs Singles", href: "#" },
+  { name: "Bath Bombs Rack", href: "#" },
+  { name: "Bath Bombs in Use", href: "#" },
+  { name: "Bath Bombs in Production", href: "#" },
 ];
 
 const filters = [
-  {
-    id: "color",
-    name: "Color",
-    options: [
-      { value: "white", label: "White", checked: false },
-      { value: "beige", label: "Beige", checked: false },
-      { value: "blue", label: "Blue", checked: true },
-      { value: "brown", label: "Brown", checked: false },
-      { value: "green", label: "Green", checked: false },
-      { value: "purple", label: "Purple", checked: false },
-    ],
-  },
   {
     id: "category",
     name: "Category",
     options: [
       { value: "new-arrivals", label: "New Arrivals", checked: false },
-      { value: "sale", label: "Sale", checked: false },
-      { value: "travel", label: "Travel", checked: true },
-      { value: "organization", label: "Organization", checked: false },
-      { value: "accessories", label: "Accessories", checked: false },
-    ],
-  },
-  {
-    id: "size",
-    name: "Size",
-    options: [
-      { value: "2l", label: "2L", checked: false },
-      { value: "6l", label: "6L", checked: false },
-      { value: "12l", label: "12L", checked: false },
-      { value: "18l", label: "18L", checked: false },
-      { value: "20l", label: "20L", checked: false },
-      { value: "40l", label: "40L", checked: true },
+      { value: "singles", label: "Singles", checked: false },
+      { value: "rack", label: "Rack", checked: true },
+      { value: "in-use", label: "In-use", checked: false },
+      { value: "production", label: "Production", checked: false },
     ],
   },
 ];
@@ -354,33 +328,14 @@ const ProductsPage = () => {
 
                 {/* Product grid */}
                 <div className="lg:col-span-3 bg-transparent">
-                  <div className="h-96 rounded-lg lg:h-full">
+                  <div className="rounded-lg lg:h-full">
                     <div className="mx-auto max-w-2xl py-16 px-4 sm:py-2 sm:px-6 lg:max-w-7xl lg:px-4">
                       <h2 className="sr-only">Products</h2>
 
                       <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
                         {ProductItems &&
                           ProductItems.map((product) => (
-                            <Link
-                              to={`/products/${product.id}`}
-                              key={product.id}
-                              href={product.href}
-                              className="group"
-                            >
-                              <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
-                                <img
-                                  src={product.imageSrc}
-                                  alt={product.imageAlt}
-                                  className="h-60 w-full object-cover object-center group-hover:opacity-75"
-                                />
-                              </div>
-                              <h3 className="mt-4 text-sm text-lightGrey">
-                                {product.name}
-                              </h3>
-                              <p className="mt-1 text-lg font-medium text-lightGold">
-                                {product.price}
-                              </p>
-                            </Link>
+                            <ProductCard key={product.id} product={product} />
                           ))}
                       </div>
                     </div>
