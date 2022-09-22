@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 
 import ProductItems from "../../components/productsFolder/products.json";
@@ -18,7 +18,6 @@ const ProductDetail = () => {
   const { addItemToCart } = useContext(CartContext);
 
   const data = ProductItems.filter((product) => product.id == params?.id);
-  console.log(data);
 
   const [description, setDescription] = useState(true);
   const handleDescription = () => {
@@ -30,10 +29,14 @@ const ProductDetail = () => {
     setReview(!review);
   };
 
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(1);
   const incrementCounter = () => setCounter(counter + 1);
   const decrementCounter = () =>
-    counter > 0 ? setCounter(counter - 1) : setCounter(0);
+    counter > 1 ? setCounter(counter - 1) : setCounter(1);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="container mx-auto mt-20 px-5 product-detail-page">
@@ -146,7 +149,6 @@ const ProductDetail = () => {
 
           <button
             className="buy-now"
-            disabled={counter == 0 ? true : false}
             onClick={() => addItemToCart(data[0], counter)}
           >
             Buy now
