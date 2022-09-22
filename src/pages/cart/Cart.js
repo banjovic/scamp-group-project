@@ -54,11 +54,14 @@ const Cart = () => {
         </div>
       ) : (
         <div className="space-y-5 w-11/12 mx-auto my-8 flex flex-col">
-          <div className="bg-lightGrey px-4 pb-4">
-            <div className="hidden md:grid grid-cols-4 place-items-center py-2 border-b-[1px] border-solid border-black">
+          <div className="bg-transparent px-4 pb-4">
+            <div className="hidden md:grid grid-cols-4 place-items-center py-2 border-b-[2px] border-solid border-darkGold">
               {["Products", "Price", "Quantity", "Total"].map(
                 (title, index) => (
-                  <h2 key={index} className="font-normal uppercase text-sm">
+                  <h2
+                    key={index}
+                    className="font-600 uppercase text-sm text-darkGold"
+                  >
                     {title}
                   </h2>
                 )
@@ -69,7 +72,7 @@ const Cart = () => {
               return (
                 <div
                   key={id}
-                  className="pt-5 pb-2 grid grid-cols-3 gap-y-2 border-b-[1px] border-grey last:border-b-0 md:grid-cols-4 md:place-items-center"
+                  className="pt-5 pb-2 grid grid-cols-3 gap-y-2 border-b-[1px] border-lightGold/30 last:border-b-0 md:grid-cols-4 md:place-items-center"
                 >
                   <div className="justify-self-start col-span-3 flex gap-3 md:col-span-1 md:order-1">
                     <img
@@ -77,38 +80,40 @@ const Cart = () => {
                       alt="Bath bomb"
                       className="max-w-[80px] w-full h-[60px]"
                     />
-                    <h3 className="uppercase font-normal text-base">{name}</h3>
+                    <h3 className="uppercase font-normal text-base text-lightGrey">
+                      {name}
+                    </h3>
                   </div>
-                  <span className="hidden md:block  md:order-2">
+                  <span className="hidden md:block  md:order-2 text-lightGrey">
                     NGN {price}
                   </span>
-                  <span
-                    className="underline underline-offset-2 uppercase text-sm md:order-5 md:justify-self-start cursor-pointer"
+                  <button
+                    className="underline underline-offset-2 uppercase text-sm md:order-5 md:justify-self-start cursor-pointer text-lightGrey hover:text-darkGold"
                     onClick={() => clearItemFromCart(cartItem)}
                   >
                     remove
-                  </span>
-                  <div className="justify-self-start border border-darkGrey px-2 py-[2px] space-x-4 md:justify-self-center md:order-3">
+                  </button>
+                  <div className="justify-self-start border border-darkGold px-2 py-[2px] space-x-4 md:justify-self-center md:order-3 text-darkGold">
                     <button onClick={() => decreaseItemInCart(cartItem)}>
                       -
                     </button>
-                    <span>{quantity}</span>
+                    <span className="text-lightGrey">{quantity}</span>
                     <button onClick={() => increaseItemInCart(cartItem)}>
                       +
                     </button>
                   </div>
-                  <span className="justify-self-center md:order-4">
+                  <span className="justify-self-center md:order-4 text-lightGrey">
                     NGN {price * quantity}
                   </span>
                 </div>
               );
             })}
           </div>
-          <h4 className="self-end text-lightGrey">
+          <h4 className="self-end text-darkGold">
             Total: <span>NGN {total}</span>
           </h4>
           <button
-            className="bg-darkGold px-3 h-[50px] max-w-[350px] w-full self-end uppercase font-semibold"
+            className="bg-darkGold hover:bg-darkGold/60 px-3 h-[50px] max-w-[350px] w-full self-end uppercase font-semibold"
             onClick={() => initializePayment(onSuccess, onClose)}
           >
             Proceed to Checkout

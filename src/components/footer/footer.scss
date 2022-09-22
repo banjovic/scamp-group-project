@@ -20,7 +20,6 @@
       gap: 20px;
 
       h1 {
-        font-family: "Abhaya Libre";
         font-style: normal;
         font-weight: 700;
         font-size: 3.125rem;
@@ -28,7 +27,6 @@
       }
 
       h2 {
-        font-family: "Abhaya Libre Medium";
         font-style: normal;
         font-weight: 500;
         font-size: 1.875rem;
@@ -36,7 +34,6 @@
       }
 
       p {
-        font-family: "Abhaya Libre";
         font-style: normal;
         font-weight: 400;
         font-size: 1.25rem;
@@ -61,13 +58,11 @@
 
       .center1,
       .center2 {
-        // justify-self: center;
         display: flex;
         flex-direction: column;
         gap: 10px;
 
         h1 {
-          font-family: "Abhaya Libre";
           font-style: normal;
           font-weight: 700;
           font-size: 1.563rem;
@@ -78,7 +73,6 @@
 
         a {
           text-decoration: none;
-          font-family: "Abhaya Libre";
           font-style: normal;
           font-weight: 400;
           font-size: 1.188rem;
@@ -92,7 +86,6 @@
         gap: 50px;
 
         h1 {
-          font-family: "Abhaya Libre";
           font-style: normal;
           font-weight: 700;
           font-size: 1.563rem;
@@ -119,7 +112,6 @@
             h1 {
               width: 6.25rem;
               height: 2.125rem;
-              font-family: "Abhaya Libre Medium";
               font-style: normal;
               font-weight: 500;
               font-size: 1.438rem;
@@ -127,7 +119,6 @@
             }
 
             p {
-              font-family: "Abhaya Libre";
               font-style: normal;
               font-weight: 400;
               font-size: 1.188rem;
@@ -146,7 +137,6 @@
   .footer-bottom {
     margin: 1rem 0;
     box-sizing: border-box;
-    font-family: "Abhaya Libre";
     font-style: normal;
     font-weight: 400;
     font-size: 1rem;
