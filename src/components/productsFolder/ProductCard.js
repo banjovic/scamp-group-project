@@ -23,7 +23,7 @@ const ProductCard = ({ product }) => {
           <img
             src={product.imageSrc}
             alt={product.imageAlt}
-            className="h-60 w-full object-cover object-center group-hover:opacity-75 md:w-60"
+            className="h-60 w-full object-cover object-center group-hover:opacity-75"
           />
         </div>
         <h3 className="mt-4 text-sm text-lightGrey">{product.name}</h3>
