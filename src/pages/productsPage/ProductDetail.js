@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import React, { useState, useContext, useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
 
 import ProductItems from "../../components/productsFolder/products.json";
+import { CartContext } from "../../context/cart/cart.context";
 
 import { StarIcon } from "@heroicons/react/20/solid";
 
@@ -14,9 +15,9 @@ function classNames(...classes) {
 const ProductDetail = () => {
   // useParams helps in getting id from the url
   const params = useParams();
+  const { addItemToCart } = useContext(CartContext);
 
   const data = ProductItems.filter((product) => product.id == params?.id);
-  console.log(data);
 
   const [description, setDescription] = useState(true);
   const handleDescription = () => {
@@ -28,10 +29,14 @@ const ProductDetail = () => {
     setReview(!review);
   };
 
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(1);
   const incrementCounter = () => setCounter(counter + 1);
   const decrementCounter = () =>
-    counter > 0 ? setCounter(counter - 1) : setCounter(0);
+    counter > 1 ? setCounter(counter - 1) : setCounter(1);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="container mx-auto mt-20 px-5 product-detail-page">
@@ -39,7 +44,7 @@ const ProductDetail = () => {
         <Link to={"/products"}>
           <div className="text-lightGrey">Products</div>
         </Link>
-        \<div className="text-gold"> ProductDetail</div>
+        /<div className="text-gold"> ProductDetail</div>
       </div>
 
       <div className="product-detail-page-content-wrapper">
@@ -120,7 +125,7 @@ const ProductDetail = () => {
             </div>
           </div>
 
-          <div className="product-price">{data[0].price}</div>
+          <div className="product-price">NGN {data[0].price}</div>
 
           <div className="product-counter-wrapper">
             <div
@@ -142,26 +147,12 @@ const ProductDetail = () => {
             </div>
           </div>
 
-          <div className="product-detail-actions">
-            <button className="buy-now">Buy Now</button>
-            <button className="add-to-cart">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-6 h-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
-                />
-              </svg>
-              Add to Cart
-            </button>
-          </div>
+          <button
+            className="buy-now"
+            onClick={() => addItemToCart(data[0], counter)}
+          >
+            Buy now
+          </button>
         </div>
       </div>
     </div>
