@@ -4,10 +4,14 @@ import "./about.scss";
 const About = () => {
   return (
     <div className="about-container container mx-auto mt-10 px-5">
-      <div className="preview bg-transparent">
+      <div className="bg-transparent section">
         <div className="text">
-          <h1>The most modern and efficient way to treat skin.</h1>
-          <p>Radiant, nourished and plumper skin is just 30-minutes away</p>
+          <h1 className="text-white mb-2 my-2">
+            The most modern and efficient way to treat skin.
+          </h1>
+          <p className="mb-4 my-4 text-white">
+            Radiant, nourished and plumper skin is just 30-minutes away
+          </p>
         </div>
         <div className="pic">
           <img
@@ -16,57 +20,55 @@ const About = () => {
           />
         </div>
       </div>
-      <div className="alternating">
+      <div className="section">
         <div className="pic">
           <img
             src="https://sokebeauty.com/wp-content/uploads/soke-eye-mouseover.jpg"
             alt=""
           />
         </div>
-        <div className="info bg-transparent">
-          <div>
-            <h2>Forget about masking — now we Soke.</h2>
-            <p>
-              Soke is unlike any other mask. The super coated hydrogel is
-              carefully formulated to ensure its potent peptides stay at their
-              highest efficacy and soak (Soke) into your skin instead of resting
-              on it. You get all the goods without the slippery and sticky
-              residue.
-            </p>
-            <p>
-              Not only does Soke work fast, but it also works on your schedule.
-              Its incredibly adaptable design seamlessly adheres to your skin
-              without a tacky texture so you can wear it at home or on the go.{" "}
-            </p>
-            <p>
-              Incorporate it into your skincare regime and use as frequently as
-              you desire for immediate and cumulative results. It is truly
-              short-term wear for long-term results.
-            </p>
-          </div>
+        <div className="text bg-transparent">
+          <h1 className="text-white mb-2 my-2">
+            Forget about masking — now we Soke.
+          </h1>
+          <p className="mb-4 my-4 text-white">
+            Soke is unlike any other mask. The super coated hydrogel is
+            carefully formulated to ensure its potent peptides stay at their
+            highest efficacy and soak (Soke) into your skin instead of resting
+            on it. You get all the goods without the slippery and sticky
+            residue.
+          </p>
+          <p className="mb-4 my-4 text-white">
+            Not only does Soke work fast, but it also works on your schedule.
+            Its incredibly adaptable design seamlessly adheres to your skin
+            without a tacky texture so you can wear it at home or on the go.{" "}
+          </p>
+          <p className="mb-4 my-4 text-white">
+            Incorporate it into your skincare regime and use as frequently as
+            you desire for immediate and cumulative results. It is truly
+            short-term wear for long-term results.
+          </p>
         </div>
       </div>
-      <div className="alternating ">
-        <div className="info">
-          <div>
-            <h2>We go beyond feel good</h2>
-            <p>
-              Every Soke hydrogel treatment delivers a pampering experience that
-              makes you feel good—only that it does so much more than that.
-            </p>
-            <p>
-              Its unique patent-pending delivery system gets you results fast.
-              Plumping, lifting and nourishing your skin in as little as 30
-              minutes.
-            </p>
-            <p>
-              In our clinical trials, all participants reported their skin felt
-              more hydrated, smoother and softer. 90% said wrinkles and fine
-              lines were less visible.
-            </p>
-            <p>Don’t take our word for it…</p>
-            <button>See for youself</button>
-          </div>
+      <div className="section">
+        <div className="text">
+          <h2 className="text-white mb-2 my-2">We go beyond feel good</h2>
+          <p className="mb-4 my-4 text-white">
+            Every Soke hydrogel treatment delivers a pampering experience that
+            makes you feel good—only that it does so much more than that.
+          </p>
+          <p className="mb-4 my-4 text-white">
+            Its unique patent-pending delivery system gets you results fast.
+            Plumping, lifting and nourishing your skin in as little as 30
+            minutes.
+          </p>
+          <p className="mb-4 my-4 text-white">
+            In our clinical trials, all participants reported their skin felt
+            more hydrated, smoother and softer. 90% said wrinkles and fine lines
+            were less visible.
+          </p>
+          <p className="mb-4 my-4 text-white">Don’t take our word for it…</p>
+          <button className="text-white">See for youself</button>
         </div>
         <div className="pic">
           <img
@@ -75,7 +77,7 @@ const About = () => {
           />
         </div>
       </div>
-      <div className="blockquote">
+      <div className="section-blockquote text-white">
         <blockquote>
           “Thirty minutes later, I removed the mask and WOW! a noticeable
           difference in the texture of my skin and wrinkling and my decolletage
@@ -83,35 +85,34 @@ const About = () => {
         </blockquote>
         <span>- Soko fan</span>
       </div>
-      <div className="alternating">
-        <div className="info">
-          <div>
-            <h2>I’m Amy Newman Brown, founder and CEO of Soke Beauty</h2>
-            <p>
-              I don’t believe in anti-aging. I believe in pro-aging: while we
-              cannot stop the clock, we all have a say in how we want to age.
-            </p>
-            <p>
-              As the Aesthetic Director for one of North America’s top plastic
-              surgeons and a long-time skincare fanatic, I’ve had the
-              opportunity to try it all (well, almost). At the same time, I have
-              worked with hundreds of patients helping them choose how they want
-              to age with the best and latest non-invasive treatments available.
-            </p>
-            <p>
-              I noticed a lot of those patients were looking to improve and
-              maintain their results post-treatment. Especially for the areas
-              that are most commonly neglected and reflect aging the soonest
-              like the eye contour, decolletage and neck.
-            </p>
-            <p>
-              Having tried countless topicals I knew there had to be a better
-              and less time-consuming way to treat those areas of the body. We
-              are all busy. We simply don’t have the time to sit around with a
-              mask.
-            </p>
-            <p> This is when I had the idea for Soke.</p>
-          </div>
+      <div className="section">
+        <div className="text">
+          <h2 className="text-white mb-2 my-2">
+            I’m Amy Newman Brown, founder and CEO of Soke Beauty
+          </h2>
+          <p>
+            I don’t believe in anti-aging. I believe in pro-aging: while we
+            cannot stop the clock, we all have a say in how we want to age.
+          </p>
+          <p>
+            As the Aesthetic Director for one of North America’s top plastic
+            surgeons and a long-time skincare fanatic, I’ve had the opportunity
+            to try it all (well, almost). At the same time, I have worked with
+            hundreds of patients helping them choose how they want to age with
+            the best and latest non-invasive treatments available.
+          </p>
+          <p>
+            I noticed a lot of those patients were looking to improve and
+            maintain their results post-treatment. Especially for the areas that
+            are most commonly neglected and reflect aging the soonest like the
+            eye contour, decolletage and neck.
+          </p>
+          <p>
+            Having tried countless topicals I knew there had to be a better and
+            less time-consuming way to treat those areas of the body. We are all
+            busy. We simply don’t have the time to sit around with a mask.
+          </p>
+          <p> This is when I had the idea for Soke.</p>
         </div>
         <div className="pic">
           <img
@@ -120,7 +121,7 @@ const About = () => {
           />
         </div>
       </div>
-      <div className="alternating">
+      <div className="section">
         <div className="pic">
           <img
             src="https://sokebeauty.com/wp-content/uploads/home-landing.jpg"
@@ -152,7 +153,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="alternating">
+      <div className="section">
         <div className="info">
           <div>
             <p>
@@ -180,7 +181,9 @@ const About = () => {
       </div>
       <div className="quote">
         <div>
-          <h3>Who says you can’t get anything done in 30-minutes?</h3>
+          <h3 className="text-white mb-2 my-2">
+            Who says you can’t get anything done in 30-minutes?
+          </h3>
           <p>Try Soke today for smoother, tighter and plumper skin.</p>
           <button id="readyBtn">I'm ready to Soke</button>
         </div>

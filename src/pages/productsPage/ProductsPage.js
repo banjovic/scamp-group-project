@@ -1,7 +1,6 @@
 import React, { useState, Fragment } from "react";
 import "./ProductsPage.scss";
 import ProductItems from "../../components/productsFolder/products.json";
-// import Product1 from "../../assets/images/VA4.png";
 
 import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
