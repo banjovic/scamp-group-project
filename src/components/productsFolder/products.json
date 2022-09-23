@@ -81,7 +81,7 @@
   },
   {
     "id": 11,
-    "name": "Bath Bomb Products in a rack",
+    "name": "Bath Bomb Products (rack)",
     "href": "/products/:id",
     "price": 1000,
     "imageSrc": "https://res.cloudinary.com/dnohok50n/image/upload/v1662980669/scamp-group-project/17_vhrhwe.jpg",

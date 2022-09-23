@@ -41,14 +41,22 @@ const ProductsPage = () => {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
   const [filteredProducts, setFilteredProducts] = useState(ProductItems);
+  console.log("filteredProducts", filteredProducts);
+
   const lowToHigh = () => {
     const newProducts = filteredProducts.sort((a, b) => a.price - b.price);
     setFilteredProducts(newProducts);
+    return newProducts;
   };
+  console.log("lowToHigh", lowToHigh);
+
   const highToLow = () => {
     const newProducts = filteredProducts.sort((a, b) => b.price - a.price);
+    console.log("newProducts", newProducts);
     setFilteredProducts(newProducts);
+    return newProducts;
   };
+  console.log("highToLow", highToLow);
 
   const sortOptions = [
     {
@@ -228,6 +236,7 @@ const ProductsPage = () => {
                               <a
                                 href={option.href}
                                 onClick={option.sortFunc}
+                                // onChange={}
                                 className={classNames(
                                   option.current
                                     ? "font-medium text-gray-900"
