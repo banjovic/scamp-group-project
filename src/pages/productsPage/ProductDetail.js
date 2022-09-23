@@ -5,6 +5,7 @@ import ProductItems from "../../components/productsFolder/products.json";
 import { CartContext } from "../../context/cart/cart.context";
 
 import { StarIcon } from "@heroicons/react/20/solid";
+import ToastNotification from "../../components/toastNotification/ToastNotification";
 
 const reviews = { href: "#", average: 4, totalCount: 117 };
 
@@ -28,6 +29,9 @@ const ProductDetail = () => {
   const handleReview = () => {
     setReview(!review);
   };
+
+  // useState for the toast notification
+  const [show, setShow] = useState(false);
 
   const [counter, setCounter] = useState(1);
   const incrementCounter = () => setCounter(counter + 1);
@@ -149,11 +153,16 @@ const ProductDetail = () => {
 
           <button
             className="buy-now"
-            onClick={() => addItemToCart(data[0], counter)}
+            onClick={() => {
+              addItemToCart(data[0], counter);
+              setShow(true);
+            }}
           >
-            Buy now
+            Add to Cart
           </button>
         </div>
+
+        <ToastNotification setShow={setShow} show={show} />
       </div>
     </div>
   );

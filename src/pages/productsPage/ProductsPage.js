@@ -1,7 +1,6 @@
 import React, { useState, Fragment } from "react";
 import "./ProductsPage.scss";
 import ProductItems from "../../components/productsFolder/products.json";
-// import Product1 from "../../assets/images/VA4.png";
 
 import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
@@ -10,16 +9,8 @@ import {
   FunnelIcon,
   MinusIcon,
   PlusIcon,
-  Squares2X2Icon,
 } from "@heroicons/react/20/solid";
 import ProductCard from "../../components/productsFolder/ProductCard";
-
-const sortOptions = [
-  { name: "Best Rating", href: "#", current: true },
-  { name: "Newest", href: "#", current: false },
-  { name: "Price: Low to High", href: "#", current: false },
-  { name: "Price: High to Low", href: "#", current: false },
-];
 
 const subCategories = [
   { name: "Bath Bombs Singles", href: "#" },
@@ -42,12 +33,39 @@ const filters = [
   },
 ];
 
+const sortOptions = [
+  { name: "Default" },
+  { name: "Price: Low to High" },
+  { name: "Price: High to Low" },
+];
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 const ProductsPage = () => {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+  const [filteredProducts, setFilteredProducts] = useState([...ProductItems]);
+  const [activeOption, setActiveOption] = useState(sortOptions[0].name);
+
+  const sortProducts = (option) => {
+    if (option == "Price: Low to High") {
+      const newProducts = filteredProducts.sort((a, b) => a.price - b.price);
+
+      setFilteredProducts([...newProducts]);
+      setActiveOption(sortOptions[1].name);
+    } else if (option == "Price: High to Low") {
+      const newProducts = filteredProducts.sort((a, b) => b.price - a.price);
+
+      setFilteredProducts([...newProducts]);
+      setActiveOption(sortOptions[2].name);
+    } else if (option == "Default") {
+      const newProducts = filteredProducts.sort((a, b) => a.id - b.id);
+
+      setFilteredProducts([...newProducts]);
+      setActiveOption(sortOptions[0].name);
+    }
+  };
 
   return (
     <div className="container mx-auto mt-10 px-5 product-page">
@@ -180,7 +198,7 @@ const ProductsPage = () => {
           <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex items-baseline justify-between border-b border-gray-200 pt-24 pb-6">
               <h1 className="text-4xl font-bold tracking-tight text-lightGold">
-                New Arrivals
+                Products
               </h1>
 
               <div className="flex items-center">
@@ -208,20 +226,20 @@ const ProductsPage = () => {
                       <div className="py-1">
                         {sortOptions.map((option) => (
                           <Menu.Item key={option.name}>
-                            {({ active }) => (
-                              <a
-                                href={option.href}
-                                className={classNames(
-                                  option.current
-                                    ? "font-medium text-gray-900"
-                                    : "text-gray-500",
-                                  active ? "bg-gray-100" : "",
-                                  "block px-4 py-2 text-sm"
-                                )}
-                              >
-                                {option.name}
-                              </a>
-                            )}
+                            <button
+                              onClick={() => sortProducts(option.name)}
+                              className={classNames(
+                                activeOption == option.name
+                                  ? "font-medium text-gray-900"
+                                  : "text-gray-500",
+                                activeOption == option.name
+                                  ? "bg-gray-100"
+                                  : "",
+                                "w-full px-4 py-2 text-sm text-start"
+                              )}
+                            >
+                              {option.name}
+                            </button>
                           </Menu.Item>
                         ))}
                       </div>
@@ -234,7 +252,6 @@ const ProductsPage = () => {
                   className="-m-2 ml-5 p-2 text-gray-400 hover:text-gray-500 sm:ml-7"
                 >
                   <span className="sr-only">View grid</span>
-                  <Squares2X2Icon className="h-5 w-5" aria-hidden="true" />
                 </button>
                 <button
                   type="button"
@@ -333,8 +350,8 @@ const ProductsPage = () => {
                       <h2 className="sr-only">Products</h2>
 
                       <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-                        {ProductItems &&
-                          ProductItems.map((product) => (
+                        {filteredProducts &&
+                          filteredProducts.map((product) => (
                             <ProductCard key={product.id} product={product} />
                           ))}
                       </div>

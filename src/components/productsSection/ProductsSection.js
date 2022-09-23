@@ -24,7 +24,7 @@ const ProductsSection = () => {
       className="mt-10 pt-12 space-y-8"
     >
       <h2 id="product-section-title" className="title">
-        What we Offer
+        <a href="/products">What we Offer</a>
       </h2>
       <div className="flex flex-col gap-12 md:mx-auto md:w-fit md:flex-row">
         {filteredProducts.map((product) => (
